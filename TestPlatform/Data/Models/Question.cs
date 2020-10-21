@@ -6,12 +6,14 @@ namespace TestPlatform.Models
 {
     public class Question
     {
-        private int Testid { get; }
+        public int QuestionId { get; set; }
+        public int Testid { get; }
         public  string Name { get; private set; }
+        public virtual Test Test { get; set; }
 
         public Question(string Name)
         {
-            
+            this.Name = Name;
         }
     }
 }

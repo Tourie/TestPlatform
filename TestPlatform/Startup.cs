@@ -32,7 +32,7 @@ namespace TestPlatform
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=HelloWorld}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
