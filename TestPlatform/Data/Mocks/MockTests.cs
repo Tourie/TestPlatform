@@ -18,14 +18,14 @@ namespace TestPlatform.Data.Mocks
                 {
                     new Test("Вопросы начального уровня", "Описание"){Category = _allCategories.AllCategories.First() },
                     new Test("Вопросы среднего уровня", "Описание"){ Category = _allCategories.AllCategories.First() },
-                    new Test("Вопросы повышенного уровня", "Описание"){Category = _allCategories.AllCategories.Last() }
+                    new Test("Вопросы повышенного уровня", "Описание 3 теста"){Category = _allCategories.AllCategories.Last() }
                 };
             }
         }
 
         public Test GetTestById(int testId)
         {
-            throw new NotImplementedException("nice");
+            throw new NotImplementedException();
         }
     }
 }
