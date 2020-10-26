@@ -25,7 +25,7 @@ namespace TestPlatform.Data.Mocks
 
         public Test GetTestById(int testId)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("nice");
         }
     }
 }
