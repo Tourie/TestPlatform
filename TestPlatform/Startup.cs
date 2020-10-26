@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TestPlatform.Data.Interfaces;
+using TestPlatform.Data.Mocks;
+using TestPlatform.Models;
 
 namespace TestPlatform
 {
@@ -19,6 +22,8 @@ namespace TestPlatform
         {
             services.AddMvc();
             services.AddControllersWithViews();
+            services.AddTransient<IAllCategories, MockCategory>();
+            services.AddTransient<IAllTests, MockTests>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

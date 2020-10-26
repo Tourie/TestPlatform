@@ -6,7 +6,7 @@ using TestPlatform.Models;
 
 namespace TestPlatform.Data.Interfaces
 {
-    interface IAllTests
+    public interface IAllTests
     {
         IEnumerable<Test> Tests { get; }
         Test GetTestById(int testId);

@@ -1,0 +1,12 @@
+﻿@using TestPlatform.Models
+@model List<Test>
+
+@{
+    ViewData["Title"] = "Все тесты";
+}
+
+<h1>Index</h1>
+@foreach(var test in Model)
+{
+    <p>@test.Name</p>
+}

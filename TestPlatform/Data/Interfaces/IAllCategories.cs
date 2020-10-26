@@ -6,7 +6,7 @@ using TestPlatform.Models;
 
 namespace TestPlatform.Data.Interfaces
 {
-    interface IAllCategories
+    public interface IAllCategories
     {
         IEnumerable<Category> AllCategories { get; }
     }
