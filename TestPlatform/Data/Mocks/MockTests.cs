@@ -9,7 +9,7 @@ namespace TestPlatform.Data.Mocks
 {
     public class MockTests : IAllTests
     {
-        private IAllCategories _allCategories = new MockCategory();
+        private readonly IAllCategories _allCategories = new MockCategory();
         public IEnumerable<Test> Tests
         {
             get

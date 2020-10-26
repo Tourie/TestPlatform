@@ -6,13 +6,26 @@
     <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="TestPlatform" t="IncludeRecursive">
+        <e p="Contollers" t="Include">
+          <e p="TestController.cs" t="Include" />
+        </e>
         <e p="Controllers" t="Include">
           <e p="HelloWorldController.cs" t="Include" />
         </e>
-        <e p="Models" t="Include">
-          <e p="Category.cs" t="Include" />
-          <e p="Question.cs" t="Include" />
-          <e p="Test.cs" t="Include" />
+        <e p="Data" t="Include">
+          <e p="Interfaces" t="Include">
+            <e p="IAllCategories.cs" t="Include" />
+            <e p="IAllTests.cs" t="Include" />
+          </e>
+          <e p="Mocks" t="Include">
+            <e p="MockCategory.cs" t="Include" />
+            <e p="MockTests.cs" t="Include" />
+          </e>
+          <e p="Models" t="Include">
+            <e p="Category.cs" t="Include" />
+            <e p="Question.cs" t="Include" />
+            <e p="Test.cs" t="Include" />
+          </e>
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
@@ -20,6 +33,11 @@
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="TestPlatform.csproj" t="IncludeRecursive" />
+        <e p="Views" t="Include">
+          <e p="Test" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+        </e>
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -27,6 +45,7 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
               <e p="TestPlatform.AssemblyInfo.cs" t="Include" />
+              <e p="TestPlatform.RazorAssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>

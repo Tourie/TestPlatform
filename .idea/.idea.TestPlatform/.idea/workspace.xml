@@ -4,18 +4,31 @@
     <projectFile>TestPlatform/TestPlatform.csproj</projectFile>
   </component>
   <component name="BranchesTreeState">
-    <expand />
-    <select />
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4200b99d-3237-425c-8331-ded5331dfac9" name="Default Changelist" comment="create a new project">
-      <change afterPath="$PROJECT_DIR$/TestPlatform/Models/Category.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestPlatform/Models/Question.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestPlatform/Models/Test.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestPlatform/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestPlatform/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestPlatform/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestPlatform/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestPlatform/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestPlatform/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestPlatform/TestPlatform.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestPlatform/TestPlatform.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestPlatform/Contollers/TestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestPlatform/Contollers/TestController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +49,8 @@
         <option value="$PROJECT_DIR$/TestPlatform/Models/Test.cs" />
         <option value="$PROJECT_DIR$/TestPlatform/Models/Question.cs" />
         <option value="$PROJECT_DIR$/TestPlatform/Startup.cs" />
+        <option value="$PROJECT_DIR$/TestPlatform/Controllers/f.cshtml" />
+        <option value="$PROJECT_DIR$/TestPlatform/Contollers/TestController.cs" />
       </list>
     </option>
   </component>
@@ -109,6 +124,8 @@
       <workItem from="1600366130245" duration="910000" />
       <workItem from="1600980431054" duration="3564000" />
       <workItem from="1601046957291" duration="3653000" />
+      <workItem from="1601473895092" duration="1099000" />
+      <workItem from="1603721421359" duration="386000" />
     </task>
     <task id="LOCAL-00001" summary="create a new project">
       <created>1598979681755</created>
@@ -137,7 +154,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -154,22 +183,22 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="1160" y="444" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1600366212203" />
-    <state width="1802" height="235" key="GridCell.Tab.0.bottom" timestamp="1601025925280">
+    <state width="901" height="235" key="GridCell.Tab.0.bottom" timestamp="1603721969889">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="235" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1601025925280" />
-    <state width="1802" height="235" key="GridCell.Tab.0.center" timestamp="1601025925280">
+    <state width="901" height="235" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1603721969889" />
+    <state width="901" height="235" key="GridCell.Tab.0.center" timestamp="1603721969889">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="235" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1601025925280" />
-    <state width="1802" height="235" key="GridCell.Tab.0.left" timestamp="1601025925279">
+    <state width="901" height="235" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1603721969889" />
+    <state width="901" height="235" key="GridCell.Tab.0.left" timestamp="1603721969889">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="235" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1601025925279" />
-    <state width="1802" height="235" key="GridCell.Tab.0.right" timestamp="1601025925280">
+    <state width="901" height="235" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1603721969889" />
+    <state width="901" height="235" key="GridCell.Tab.0.right" timestamp="1603721969889">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="235" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1601025925280" />
+    <state width="901" height="235" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1603721969889" />
     <state x="591" y="288" width="800" height="537" key="Rider.ProjectTemplateDialog.Size" timestamp="1599821252305">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -182,6 +211,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1598981145394" />
+    <state x="1138" y="491" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603721597151">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="1138" y="491" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1603721597151" />
     <state x="965" y="281" key="run.anything.popup" timestamp="1601050378103">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

@@ -11,7 +11,7 @@ namespace TestPlatform.Contollers
     public class TestController : Controller
     {
         private IEnumerable<Category> categories;
-        private IEnumerable<Test> tests;
+        private IEnumerable<Test> tests { get; set; }
         public TestController(IAllCategories allCategories, IAllTests allTests)
         {
             tests = allTests.Tests;
@@ -20,7 +20,7 @@ namespace TestPlatform.Contollers
 
         public ViewResult Index()
         {
-            return View(tests);
+            return View(tests as List<Test>);
         }
     }
 }
