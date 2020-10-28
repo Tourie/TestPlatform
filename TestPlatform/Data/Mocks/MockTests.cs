@@ -16,9 +16,9 @@ namespace TestPlatform.Data.Mocks
             {
                 return new List<Test>
                 {
-                    new Test("Вопросы начального уровня", "Описание"){Category = _allCategories.AllCategories.First() },
-                    new Test("Вопросы среднего уровня", "Описание"){ Category = _allCategories.AllCategories.First() },
-                    new Test("Вопросы повышенного уровня", "Описание 3 теста"){Category = _allCategories.AllCategories.Last() }
+                    new Test("Вопросы начального уровня", "Описание"){ Category = _allCategories.AllCategories.First() },
+                    new Test("Вопросы среднего уровня", "Описание 2 теста"){ Category = _allCategories.AllCategories.First() },
+                    new Test("Вопросы повышенного уровня", "Описание 3 теста"){ Category = _allCategories.AllCategories.Last() }
                 };
             }
         }

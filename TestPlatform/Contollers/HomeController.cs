@@ -8,11 +8,11 @@ using TestPlatform.Models;
 
 namespace TestPlatform.Contollers
 {
-    public class TestController : Controller
+    public class HomeController : Controller
     {
         private IEnumerable<Category> categories;
         private IEnumerable<Test> tests { get; set; }
-        public TestController(IAllCategories allCategories, IAllTests allTests)
+        public HomeController(IAllCategories allCategories, IAllTests allTests)
         {
             tests = allTests.Tests;
             categories = allCategories.AllCategories;
@@ -20,7 +20,7 @@ namespace TestPlatform.Contollers
 
         public ViewResult Index()
         {
-            return View(tests as List<Test>);
+            return View(tests);
         }
     }
 }
