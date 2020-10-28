@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Test>
+
+@{
+    ViewData["Title"] = "Все тесты";
+}
+
+<h1>Index</h1>
+@foreach (var test in Model)
+{
+    <div class="card m-1">
+        <div class="card-body">
+            <p class="test_name">@test.Name</p>
+            <p>12 мин</p>
+            <a class="btn btn-primary">Подробнее</a>
+        </div>
+    </div>
+    
+}
