@@ -10,12 +10,10 @@ namespace TestPlatform.Contollers
 {
     public class TestsController : Controller
     {
-        private IEnumerable<Category> categories;
         private IEnumerable<Test> tests { get; set; }
-        public TestsController(IAllCategories allCategories, IAllTests allTests)
+        public TestsController(IAllTests allTests)
         {
             tests = allTests.Tests;
-            categories = allCategories.AllCategories;
         }
 
         public IActionResult Index()
