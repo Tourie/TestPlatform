@@ -15,9 +15,9 @@ namespace TestPlatform.Data.Mocks
             {
                 return new List<Category>
                 {
-                    new Category("Матемактика","Вопросы по математике"),
-                    new Category("Физика","Вопросы по физике"),
-                    new Category("Программирование","Вопросы по программированию")
+                    new Category("Матемактика","Вопросы по математике"){ Id = 1 },
+                    new Category("Физика","Вопросы по физике"){ Id = 2 },
+                    new Category("Программирование","Вопросы по программированию"){ Id = 3 }
                 };
             }
         }

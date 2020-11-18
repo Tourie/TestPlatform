@@ -4,7 +4,7 @@ namespace TestPlatform.Models
 {
     public class Category
     {
-        public int Id { get; }
+        public int Id { get; set; }
         public string Name { get; }
         public string Description { get; set; }
         public IEnumerable<Test> Tests { get; set; }
@@ -12,7 +12,7 @@ namespace TestPlatform.Models
         public Category(string name, string description)
         {
             Name = name;
-            Description = description;
+            Description = description
         }
     }
 }
