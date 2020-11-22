@@ -5,14 +5,13 @@
 }
 
 <h1>Все вопросы</h1>
-@foreach (var test in Model)
-{
-    <div class="card m-1">
-        <div class="card-body">
-            <p class="test_name">@test.Name</p>
-            <p>12 мин</p>
-            <a class="btn btn-primary">Подробнее</a>
-        </div>
-    </div>
-    
-}
+<table cellspacing="1" cellpadding="4">
+    @foreach (var test in Model)
+    {
+        <tr>
+            <td align="left">@test.Name</td>
+            <td align="left">Время: @test.Time мин.</td>
+            <td align="right"><a class="btn btn-primary">Подробнее</a></td>
+        </tr>
+    }
+</table>

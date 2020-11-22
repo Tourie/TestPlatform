@@ -14,7 +14,7 @@
         </header>
         <h2>Популярные категории тестов</h2>
         <section class="tiles">
-            @foreach (var (item, index) in Model.Select((item, index) => (item, index)))
+            @foreach (var (item, index) in Model.Select((item, index) => (item, index)).Take(3))
             {
                 <article class=@String.Concat("style", index+1%6 )>
                     <span class="image">
@@ -28,7 +28,10 @@
                     </a>
                 </article>
             }
-            <a href="categories" class="button mt-5" style="display:block;">Посмотреть все категории</a>
+            <div>
+                <a class="button mt-5" style="display:block;">Посмотреть все категории</a>
+            </div>
+            
         </section>
     </div>
 </div>

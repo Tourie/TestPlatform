@@ -8,7 +8,6 @@ namespace TestPlatform.Models
         public string Name { get; }
         public string Description { get; set; }
         public IEnumerable<Test> Tests { get; set; }
-
         public Category(string name, string description)
         {
             Name = name;
