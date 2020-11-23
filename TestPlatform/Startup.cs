@@ -9,13 +9,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TestPlatform.Data.Interfaces;
-using TestPlatform.Data.Mocks;
-using TestPlatform.Models;
 using TestPlatform.Infrastructure.Data;
 using TestPlatform.Infrastructure.Data.Repositories;
-using TestPlatform.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using TestPlatform.Services.Interfaces;
+using TestPlatform.Services.ModelServices;
 
 namespace TestPlatform
 {
@@ -41,7 +39,8 @@ namespace TestPlatform
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(connection));
 
-            services.AddTransient<ICategoryRepository, GenRepository>();
+            services.AddScoped(typeof(IRepository<>), typeof(GenRepository<>));
+            services.AddTransient<ICategoryService, CategoryService>();
         }
         
 

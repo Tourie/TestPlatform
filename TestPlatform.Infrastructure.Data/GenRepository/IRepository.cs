@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TestPlatform.Domain.Interfaces
+namespace TestPlatform.Infrastructure.Data
 {
     public interface IRepository<T>: IDisposable
         where T: class

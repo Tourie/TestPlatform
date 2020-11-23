@@ -3,23 +3,22 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TestPlatform.Core;
-using TestPlatform.Domain.Interfaces;
 
 namespace TestPlatform.Infrastructure.Data.Repositories
 {
     public class GenRepository<T> : IRepository<T> where T: class
     {
-        private DbContext _db;
+        private ApplicationContext _db;
         private DbSet<T> _set;
         private bool disposed = false;
-        public GenRepository(DbContext db)
+        public GenRepository(ApplicationContext db)
         {
             this._db = db;
             this._set = db.Set<T>();
         }
         public IEnumerable<T> GetAll()
         {
-            return _set.AsNoTracking<T>();
+            return _set.AsQueryable();
         }
         public void Create(T item)
         {

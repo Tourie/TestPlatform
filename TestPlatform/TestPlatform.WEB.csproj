@@ -25,9 +25,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TestPlatform.Domain.Core\TestPlatform.Core.csproj" />
       <ProjectReference Include="..\TestPlatform.Infrastructure.Data\TestPlatform.Infrastructure.Data.csproj" />
       <ProjectReference Include="..\TestPlatform.Services.Interfaces\TestPlatform.Services.Interfaces.csproj" />
+      <ProjectReference Include="..\TestPlatform.Services.ModelServices\TestPlatform.Services.ModelServices.csproj" />
     </ItemGroup>
 
 </Project>

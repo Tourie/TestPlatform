@@ -22,6 +22,7 @@ namespace TestPlatform.Infrastructure.Data
                     new Category{ Id = 2, Name="Физика", Description="Вопросы по физике"},
                     new Category{ Id = 3, Name="Программирование", Description="Вопросы по программированию"}
                 });
+            modelBuilder.Entity<>
         }
     }
 }

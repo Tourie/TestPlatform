@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using TestPlatform.Data.Interfaces;
-using TestPlatform.Domain.Interfaces;
-using TestPlatform.Domain.Core;
+using TestPlatform.Core;
+using TestPlatform.Services.Interfaces;
 
 namespace TestPlatform.Contollers
 {
     public class HomeController : Controller
     {
         private IEnumerable<Category> Categories { get; set; }
-        public HomeController(ICategoryRepository categoryRepository)
+        public HomeController(ICategoryService categoryService)
         {
-            Categories = categoryRepository.AllCategories();
+            Categories = categoryService.GetAll();
         }
         public IActionResult Index()
         {
