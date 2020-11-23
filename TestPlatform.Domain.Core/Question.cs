@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
 using System.Runtime.Serialization;
 
-namespace TestPlatform.Domain.Core
+namespace TestPlatform.Core
 {
     public class Question
     {

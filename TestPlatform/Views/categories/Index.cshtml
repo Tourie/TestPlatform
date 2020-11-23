@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "Все категории!";
+}
+
+<div id="main">
+    <div class="inner">
+        <h2>Все доступные категории</h2>
+        <section class="tiles">
+            @foreach (var (item, index) in Model.Select((item, index) => (item, index)))
+            {
+                <article class=@String.Concat("style", index+1%6 )>
+                    <span class="image">
+                        <img src="~/img/pic1.jpg" alt="" />
+                    </span>
+                    <a href="categories/@item.Id">
+                        <h2>@item.Name</h2>
+                        <div class="content">
+                            <p>@item.Description</p>
+                        </div>
+                    </a>
+                </article>
+            }
+            <div>
+                <a class="button mt-5" style="display:block;">Посмотреть все категории</a>
+            </div>
+
+        </section>
+    </div>
+</div>

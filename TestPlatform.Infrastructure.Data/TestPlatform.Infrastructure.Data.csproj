@@ -10,8 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TestPlatform.Domain.Core\TestPlatform.Domain.Core.csproj" />
-    <ProjectReference Include="..\TestPlatform.Domain.Interfaces\TestPlatform.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\TestPlatform.Domain.Core\TestPlatform.Core.csproj" />
   </ItemGroup>
 
 </Project>

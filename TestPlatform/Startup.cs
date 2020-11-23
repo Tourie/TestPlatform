@@ -34,13 +34,16 @@ namespace TestPlatform
             services.AddControllersWithViews();
             /*services.AddTransient<IAllCategories, MockCategory>();
             services.AddTransient<IAllTests, MockTests>();*/
-            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            
 
             //connect to db
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(connection));
+
+            services.AddTransient<ICategoryRepository, GenRepository>();
         }
+        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

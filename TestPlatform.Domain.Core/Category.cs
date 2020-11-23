@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace TestPlatform.Domain.Core
+namespace TestPlatform.Core
 {
     public class Category
     {

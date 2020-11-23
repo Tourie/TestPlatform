@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TestPlatform.Services.Interfaces
+namespace TestPlatform.Services.ModelServices
 {
     public class Class1
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace TestPlatform.Domain.Core
+namespace TestPlatform.Core
 {
     public class Test
     {

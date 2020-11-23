@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
-using TestPlatform.Domain.Core;
+using TestPlatform.Core;
 
 namespace TestPlatform.Infrastructure.Data
 {

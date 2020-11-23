@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using TestPlatform.Domain.Interfaces;
+using TestPlatform.Core;
 
 namespace TestPlatform.Contollers
 {
     public class categoriesController : Controller
     {
-        public IActionResult Index(ICategoryRepository categoryRepository)
+        private IEnumerable<Category> Categories { get; set; }
+        public categoriesController(ICategoryRepository categoryRepository)
         {
-            var categories = categoryRepository.AllCategories();
-            return View(categories);
+            Categories = categoryRepository.AllCategories();
+        }
+        public IActionResult Index()
+        {
+            return View(Categories);
         }
     }
 }
