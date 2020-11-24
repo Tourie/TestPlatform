@@ -9,16 +9,23 @@ using TestPlatform.Services.Interfaces;
 
 namespace TestPlatform.Contollers
 {
-    public class categoriesController : Controller
+    public class CategoriesController : Controller
     {
-        private IEnumerable<Category> Categories { get; set; }
-        public categoriesController(ICategoryService categoryService)
+        /*private IEnumerable<Category> Categories { get; set; }*/
+        private ICategoryService CategoryService { get; set; }
+        public CategoriesController(ICategoryService categoryService)
         {
-            Categories = categoryService.GetAll();
+            CategoryService = categoryService;
         }
         public IActionResult Index()
         {
-            return View(Categories);
+            var categories = CategoryService.GetAll();
+            return View(categories);
+        }
+        public IActionResult Details(int id)
+        {
+            Category category = CategoryService.GetCategory(id);
+            return View(category);
         }
     }
 }

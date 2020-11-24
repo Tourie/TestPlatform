@@ -1,0 +1,19 @@
+2020-11-24 21:08:31.6403|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-24 21:08:31.7052|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-24 21:08:31.7180|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-24 21:08:31.7180|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-24 21:08:31.7180|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-24 21:08:38.4575|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Details' was not found. Searched locations: /Views/Categories/Details.cshtml, /Views/Shared/Details.cshtml, /Pages/Shared/Details.cshtml
+2020-11-24 21:08:38.5569|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-24 22:03:39.8002|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-24 22:03:39.8627|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-24 22:03:39.8794|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-24 22:03:39.8794|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-24 22:03:39.9006|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-24 22:04:25.5074|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Details' was not found. Searched locations: /Views/Categories/Details.cshtml, /Views/Shared/Details.cshtml, /Pages/Shared/Details.cshtml
+2020-11-24 22:04:25.6616|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-24 22:16:42.9076|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-24 22:16:42.9542|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-24 22:16:42.9542|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-24 22:16:42.9542|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-24 22:16:42.9667|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform

@@ -14,7 +14,7 @@
                     <span class="image">
                         <img src="~/img/pic1.jpg" alt="" />
                     </span>
-                    <a href="categories/@item.Id">
+                    <a asp-route-id="@item.Id" asp-controller="Categories" asp-action="Details">
                         <h2>@item.Name</h2>
                         <div class="content">
                             <p>@item.Description</p>

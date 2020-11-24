@@ -1,17 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using TestPlatform.Core;
 
 namespace TestPlatform.Infrastructure.Data
 {
-    public class ApplicationContext: DbContext
+    public class ApplicationContext: IdentityDbContext<IdentityUser>
     {
         public DbSet<Category> Categories { get; private set; }
         public DbSet<Test> Tests { get; private set; }
         public DbSet<Question> Questions { get; private set; }
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
-            :base(options)
+            : base(options)
         {
            /* Database.EnsureDeleted();
             Database.EnsureCreated();*/
