@@ -10,7 +10,7 @@
         <section class="tiles">
             @foreach (var (item, index) in Model.Select((item, index) => (item, index)))
             {
-                <article class=@String.Concat("style", index+1%6 )>
+                <article class=@String.Concat("style", index + 1 % 6)>
                     <span class="image">
                         <img src="~/img/pic1.jpg" alt="" />
                     </span>
@@ -22,10 +22,6 @@
                     </a>
                 </article>
             }
-            <div>
-                <a class="button mt-5" style="display:block;">Посмотреть все категории</a>
-            </div>
-
         </section>
     </div>
 </div>

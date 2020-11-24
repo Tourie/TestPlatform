@@ -6,14 +6,9 @@ namespace TestPlatform.Core
 {
     public class Question
     {
-        public int QuestionId { get; set; }
-        public int Testid { get; }
-        public  string Name { get; private set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Testid { get; set; }
         public virtual Test Test { get; set; }
-
-        public Question(string Name)
-        {
-            this.Name = Name;
-        }
     }
 }

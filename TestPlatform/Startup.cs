@@ -24,16 +24,11 @@ namespace TestPlatform
         {
             Configuration = configuration;
         }
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
             services.AddControllersWithViews();
-            /*services.AddTransient<IAllCategories, MockCategory>();
-            services.AddTransient<IAllTests, MockTests>();*/
-            
-
             //connect to db
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ApplicationContext>(options =>
@@ -41,6 +36,7 @@ namespace TestPlatform
 
             services.AddScoped(typeof(IRepository<>), typeof(GenRepository<>));
             services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<ITestService, TestService>();
         }
         
 
