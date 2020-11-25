@@ -31,13 +31,17 @@ namespace TestPlatform
         {
             services.AddMvc();
             services.AddControllersWithViews();
+
+            services.AddSingleton<EmailService>();
+
             //connect to db
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(connection));
 
             services.AddIdentity<User, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationContext>();
+                .AddEntityFrameworkStores<ApplicationContext>()
+                .AddDefaultTokenProviders();
 
             services.AddScoped(typeof(IRepository<>), typeof(GenRepository<>));
             services.AddTransient<ICategoryService, CategoryService>();

@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TestPlatform.Core\TestPlatform.Core.csproj" />
     <ProjectReference Include="..\TestPlatform.Infrastructure.Data\TestPlatform.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\TestPlatform.Services.Interfaces\TestPlatform.Services.Interfaces.csproj" />

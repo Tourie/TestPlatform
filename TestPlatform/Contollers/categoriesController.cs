@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using TestPlatform.Core;
 using TestPlatform.Services.ModelServices;
 using TestPlatform.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TestPlatform.Contollers
 {
+    [Authorize]
     public class CategoriesController : Controller
     {
         /*private IEnumerable<Category> Categories { get; set; }*/

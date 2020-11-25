@@ -18,5 +18,7 @@ namespace TestPlatform.WEB.ViewModels
         [DataType(DataType.Password)]
         [Display(Name = "Подтвердить пароль")]
         public string PasswordConfirm { get; set; }
+
+        public string TokenSended { get; set; }
     }
 }
