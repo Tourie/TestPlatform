@@ -5,9 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using TestPlatform.Core;
 using TestPlatform.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TestPlatform.Contollers
 {
+    [Authorize]
     public class TestsController : Controller
     {
         private IEnumerable<Test> tests { get; set; }

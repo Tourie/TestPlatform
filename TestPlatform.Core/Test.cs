@@ -11,5 +11,7 @@ namespace TestPlatform.Core
         public uint Time { get; set; } 
 
         public IEnumerable<Category> Categories { get; set; }
+
+        public IEnumerable<Question> Questions { get; set; }
     }
 }

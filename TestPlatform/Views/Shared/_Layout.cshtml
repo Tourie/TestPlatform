@@ -33,15 +33,30 @@
 
         <!-- Menu -->
         <nav id="menu">
-            <h2>Menu</h2>
+            <h2>Меню</h2>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Tests">Ipsum veroeros</a></li>
-                <li><a href="generic.html">Tempus etiam</a></li>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Categories" asp-action="Index">Категории тестов</a></li>
+                <li><a asp-controller="Tests" asp-action="Index">Тесты</a></li>
                 <li><a href="generic.html">Consequat dolor</a></li>
                 <li><a href="elements.html">Elements</a></li>
             </ul>
-        </nav>
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <form method="post" asp-controller="Account" asp-action="Logout">
+                    <button type="submit" class="button primary">Выйти</button>
+                </form>
+            }
+            else
+            {
+                <ul class="mt-5">
+                    <li><a asp-controller="Account" asp-action="Login">Войти</a></li>
+                    <li><a asp-controller="Account" asp-action="Register">Регистрация</a></li>
+                </ul>
+            }
+                
+            </nav>
         <div class="container mt-3">
             @RenderBody()
         </div>

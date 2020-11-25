@@ -1,0 +1,20 @@
+2020-11-25 20:34:43.5735|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Description] nvarchar(max) NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2020-11-25 20:51:21.4820|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (209ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2020-11-25 21:57:28.4965|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Details' was not found. Searched locations: /Views/Categories/Details.cshtml, /Views/Shared/Details.cshtml, /Pages/Shared/Details.cshtml
+2020-11-25 21:57:28.6892|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-25 22:00:45.7881|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Details' was not found. Searched locations: /Views/Categories/Details.cshtml, /Views/Shared/Details.cshtml, /Pages/Shared/Details.cshtml
+2020-11-25 22:00:45.8119|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-25 22:06:20.2651|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Details' was not found. Searched locations: /Views/Categories/Details.cshtml, /Views/Shared/Details.cshtml, /Pages/Shared/Details.cshtml
+2020-11-25 22:06:20.4220|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.

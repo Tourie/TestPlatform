@@ -1,0 +1,140 @@
+2020-11-25 19:41:16.3465|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 19:41:16.5068|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 19:41:16.5285|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 19:41:16.5392|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 19:41:16.5392|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 20:05:27.2008|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 20:05:27.2617|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 20:05:27.3002|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 20:05:27.3712|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 20:05:27.3827|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 20:09:57.2110|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 20:09:57.3526|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 20:09:57.4546|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 20:09:57.4653|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 20:09:57.4653|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 20:19:21.3507|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 20:19:21.3952|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 20:19:21.4008|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 20:19:21.4008|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 20:19:21.4008|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 20:20:24.0643|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 20:20:24.1382|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 20:20:24.1382|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 20:20:24.1482|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 20:20:24.1482|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 20:22:59.2754|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 20:22:59.3435|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 20:22:59.3435|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 20:22:59.3535|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 20:22:59.3535|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 20:29:57.5910|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 20:29:57.6558|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 20:29:57.6558|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 20:29:57.6558|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 20:29:57.6660|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 20:34:43.5735|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Description] nvarchar(max) NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2020-11-25 20:36:19.7691|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 20:36:19.8416|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 20:36:19.8416|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 20:36:19.8513|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 20:36:19.8513|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 20:44:51.1541|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 20:44:51.2101|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 20:44:51.2155|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 20:44:51.2155|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 20:44:51.2269|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 20:46:08.4954|WARN|Microsoft.AspNetCore.Identity.UserManager|User password validation failed: PasswordRequiresNonAlphanumeric;PasswordRequiresUpper.
+2020-11-25 20:51:15.2718|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 20:51:15.3858|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 20:51:15.4033|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 20:51:15.4033|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 20:51:15.4204|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 20:51:21.4820|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (209ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2020-11-25 20:51:47.2815|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 20:51:47.3585|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 20:51:47.3707|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 20:51:47.3707|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 20:51:47.3875|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 20:52:52.4276|WARN|Microsoft.AspNetCore.Identity.UserManager|User validation failed: InvalidUserName.
+2020-11-25 20:55:00.9406|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 20:55:01.0358|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 20:55:01.0488|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 20:55:01.0786|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 20:55:01.0786|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 20:55:23.3871|WARN|Microsoft.AspNetCore.Identity.UserManager|User password validation failed: PasswordRequiresNonAlphanumeric;PasswordRequiresUpper.
+2020-11-25 20:57:07.7088|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 20:57:07.7897|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 20:57:07.8053|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 20:57:07.8325|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 20:57:07.8404|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 21:46:06.9303|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 21:46:07.0911|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 21:46:07.1095|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 21:46:07.1227|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 21:46:07.1369|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 21:47:08.2198|WARN|Microsoft.AspNetCore.Identity.UserManager|User validation failed: DuplicateUserName.
+2020-11-25 21:50:20.2070|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 21:50:20.2601|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 21:50:20.2601|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 21:50:20.2601|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 21:50:20.2869|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 21:50:42.3559|WARN|Microsoft.AspNetCore.Identity.UserManager|User password validation failed: PasswordRequiresNonAlphanumeric;PasswordRequiresUpper.
+2020-11-25 21:52:17.9668|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 21:52:18.0208|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 21:52:18.0274|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 21:52:18.0274|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 21:52:18.0274|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 21:54:22.4305|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 21:54:22.6541|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 21:54:22.6541|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 21:54:22.6731|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 21:54:22.6731|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 21:55:13.8598|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 21:55:14.0077|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 21:55:14.0304|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 21:55:14.0304|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 21:55:14.1447|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 21:56:47.3926|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 21:56:47.4586|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 21:56:47.4696|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 21:56:47.4808|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 21:56:47.5201|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 21:57:28.4965|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Details' was not found. Searched locations: /Views/Categories/Details.cshtml, /Views/Shared/Details.cshtml, /Pages/Shared/Details.cshtml
+2020-11-25 21:57:28.6892|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-25 22:00:45.7881|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Details' was not found. Searched locations: /Views/Categories/Details.cshtml, /Views/Shared/Details.cshtml, /Pages/Shared/Details.cshtml
+2020-11-25 22:00:45.8119|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-25 22:05:13.7464|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 22:05:13.8582|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 22:05:13.8582|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 22:05:13.8701|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 22:05:13.8701|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 22:06:20.2651|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Details' was not found. Searched locations: /Views/Categories/Details.cshtml, /Views/Shared/Details.cshtml, /Pages/Shared/Details.cshtml
+2020-11-25 22:06:20.4220|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-25 22:08:39.8316|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 22:08:39.9069|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 22:08:39.9207|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 22:08:39.9207|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 22:08:39.9309|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 22:09:50.7447|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 22:09:50.8033|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 22:09:50.8080|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 22:09:50.8080|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 22:09:50.8080|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-25 22:10:27.8609|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-25 22:10:27.9757|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-25 22:10:27.9855|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-25 22:10:28.0046|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-25 22:10:28.0864|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform

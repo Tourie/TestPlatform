@@ -14,6 +14,8 @@ using TestPlatform.Infrastructure.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using TestPlatform.Services.Interfaces;
 using TestPlatform.Services.ModelServices;
+using Microsoft.AspNetCore.Identity;
+using TestPlatform.Core;
 
 namespace TestPlatform
 {
@@ -33,6 +35,9 @@ namespace TestPlatform
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(connection));
+
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationContext>();
 
             services.AddScoped(typeof(IRepository<>), typeof(GenRepository<>));
             services.AddTransient<ICategoryService, CategoryService>();

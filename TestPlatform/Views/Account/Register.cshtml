@@ -1,0 +1,20 @@
+﻿@model RegisterViewModel
+<h2>Регистрация нового пользователя</h2>
+<form method="post" asp-controller="Account" asp-action="Register">
+    <div asp-validation-summary="ModelOnly" style="color: red;"></div>
+    <div class="input-group mt-2">
+        <input asp-for="Email" placeholder="Email"/>
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="input-group mt-2">
+        <input asp-for="Password" placeholder="Password"/>
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div class="input-group mt-2">
+        <input asp-for="PasswordConfirm" placeholder="Confirm password"/>
+        <span asp-validation-for="PasswordConfirm"></span>
+    </div>
+    <div class="m-2">
+        <input type="submit" value="Регистрация" />
+    </div>
+</form>
