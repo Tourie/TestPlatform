@@ -27,6 +27,7 @@ namespace TestPlatform.Contollers
         public IActionResult Details(int id)
         {
             Category category = CategoryService.GetCategory(id);
+
             return View(category);
         }
     }

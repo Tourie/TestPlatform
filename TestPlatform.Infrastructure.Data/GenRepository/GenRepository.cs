@@ -18,7 +18,7 @@ namespace TestPlatform.Infrastructure.Data.Repositories
         }
         public IEnumerable<T> GetAll()
         {
-            return _set.AsQueryable();
+            return _set;
         }
         public void Create(T item)
         {

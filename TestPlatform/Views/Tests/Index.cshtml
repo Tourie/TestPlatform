@@ -4,7 +4,8 @@
     ViewData["Title"] = "Все тесты";
 }
 
-<h1>Все вопросы</h1>
+<h1>Все доступные тесты</h1>
+<a class="btn btn-success" asp-controller="Tests" asp-action="Create">Добавить новый</a> 
 <table cellspacing="1" cellpadding="4">
     @foreach (var test in Model)
     {

@@ -1,0 +1,36 @@
+﻿@model TestCreateViewModel
+
+@{
+    ViewData["Title"] = "Новый тест";
+}
+
+<h1>Создание нового теста</h1>
+<form asp-antiforgery="true" asp-controller="Tests" asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" style="color: red;"></div>
+    <div>
+        <input asp-for="Name" placeholder="Название теста" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <textarea asp-for="Description" placeholder="Описание теста"></textarea>
+        <span asp-validation-for="Description"></span>
+    </div>
+    <div>
+        <input type="number" asp-for="Time" placeholder="Время(в мин)" />
+        <span asp-validation-for="Time"></span>
+    </div>
+    <div class="form-group">
+        <label for="sel1">Выберите категорию:</label>
+        <select multiple class="form-control" asp-for="TestCategory" id="form-control">
+            @* <option value>Выберите категорию:</option>*@
+            @foreach (var category in Model.Categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </select>
+        <span asp-validation-for="TestCategory"></span>
+    </div>
+    <div>
+        <input type="submit" value="Создать" />
+    </div>
+</form>

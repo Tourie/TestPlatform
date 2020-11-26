@@ -31,7 +31,7 @@ namespace TestPlatform.WEB.Contollers
         {
             if (ModelState.IsValid)
             {
-                User user = new User { Email = model.Email, UserName = model.Email };
+                User user = new User { Email = model.Email, UserName = model.Email, EmailConfirmed=true };
                 // добавляем пользователя
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -47,7 +47,7 @@ namespace TestPlatform.WEB.Contollers
                     await emailService.SendEmailAsync(model.Email, "Confirm your account",
                         $"Подтвердите регистрацию, перейдя по ссылке: {callbackUrl}");
 
-                    return View();
+                    return RedirectToAction("ConfirmEmailPage", "Account");
                 }
                 else
                 {
@@ -58,6 +58,12 @@ namespace TestPlatform.WEB.Contollers
                 }
             }
             return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult ConfirmEmailPage()
+        {
+            return View();
         }
 
         [HttpGet]
