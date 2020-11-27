@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "Все категории!";
+}
+
+<div id="main">
+    <div class="inner">
+        <h2>Все доступные категории</h2>
+        <section class="tiles">
+            @foreach (var (item, index) in Model.Select((item, index) => (item, index)))
+            {
+                <article class=@String.Concat("style", index + 1 % 6)>
+                    <span class="image">
+                        <img src="~/img/pic1.jpg" alt="" />
+                    </span>
+                    <a asp-route-id="@item.Id" asp-controller="Categories" asp-action="Detail">
+                        <h2>@item.Name</h2>
+                        <div class="content">
+                            <p>@item.Description</p>
+                        </div>
+                    </a>
+                </article>
+            }
+        </section>
+    </div>
+</div>

@@ -7,6 +7,8 @@ using TestPlatform.Core;
 using TestPlatform.Services.ModelServices;
 using TestPlatform.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using TestPlatform.WEB.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace TestPlatform.Contollers
 {
@@ -15,20 +17,23 @@ namespace TestPlatform.Contollers
     {
         /*private IEnumerable<Category> Categories { get; set; }*/
         private ICategoryService CategoryService { get; set; }
-        public CategoriesController(ICategoryService categoryService)
+        private ITestService TestService { get; set; }
+        public CategoriesController(ICategoryService categoryService, ITestService testService)
         {
             CategoryService = categoryService;
+            TestService = testService;
         }
         public IActionResult Index()
         {
             var categories = CategoryService.GetAll();
             return View(categories);
         }
-        public IActionResult Details(int id)
+        public IActionResult Detail(int id)
         {
-            Category category = CategoryService.GetCategory(id);
-
-            return View(category);
+            var category = CategoryService.GetCategory(id);
+            var tests = TestService.GetTestsByCategory(category);
+            var viewModel = new CategoryTestsViewModel() { Category = category, Tests = tests };
+            return View(viewModel);
         }
     }
 }

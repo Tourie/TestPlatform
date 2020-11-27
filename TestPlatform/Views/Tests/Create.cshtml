@@ -22,7 +22,7 @@
     <div class="form-group">
         <label for="sel1">Выберите категорию:</label>
         <select multiple class="form-control" asp-for="TestCategory" id="form-control">
-            @* <option value>Выберите категорию:</option>*@
+            @*<option value>Выберите категорию:</option>*@
             @foreach (var category in Model.Categories)
             {
                 <option value="@category.Id">@category.Name</option>

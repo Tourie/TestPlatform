@@ -11,6 +11,7 @@ namespace TestPlatform.Services.Interfaces
         void UpdateTest(Test item);
         void DeleteTest(int id);
         IEnumerable<Test> GetAll();
+        IEnumerable<Test> GetTestsByCategory(Category category);
         Test GetTest(int id);
         void Save();
     }

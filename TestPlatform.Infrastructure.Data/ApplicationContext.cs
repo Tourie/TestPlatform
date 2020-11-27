@@ -23,13 +23,20 @@ namespace TestPlatform.Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Category>().HasData(
+            modelBuilder.Entity<Category>()
+                .HasMany(c => c.Tests)
+                .WithMany(s => s.Categories);
+            modelBuilder.Entity<Category>()
+                .HasData(
                 new Category[]
                 {
                     new Category{ Id = 1, Name="Математика", Description="Вопросы по математике" },
                     new Category{ Id = 2, Name="Физика", Description="Вопросы по физике"},
                     new Category{ Id = 3, Name="Программирование", Description="Вопросы по программированию"}
                 });
+            modelBuilder.Entity<Test>()
+                .HasMany(t => t.Categories)
+                .WithMany(c => c.Tests);
             modelBuilder.Entity<Test>().HasData(
                 new Test[]
                 {

@@ -55,5 +55,10 @@ namespace TestPlatform.Contollers
             return RedirectToAction("Create","Tests");
             
         }
+        [HttpGet]
+        public IActionResult Detail(int id)
+        {
+            return View();
+        }
     }
 }

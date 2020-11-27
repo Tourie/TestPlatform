@@ -282,3 +282,58 @@ Error Number:207,State:1,Class:16
 2020-11-26 18:27:42.6374|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2020-11-26 18:27:42.6374|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
 2020-11-26 18:27:42.6549|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-26 18:48:44.0930|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-26 18:48:44.1925|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-26 18:48:44.2364|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-26 18:48:44.2499|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-26 18:48:44.2818|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-26 23:31:04.5301|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-26 23:31:04.5974|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-26 23:31:04.6056|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-26 23:31:04.6056|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-26 23:31:04.6341|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-26 23:31:39.8526|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-26 23:34:09.6256|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-26 23:34:09.7276|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-26 23:34:09.7824|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-26 23:34:09.8361|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-26 23:34:09.8825|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-26 23:34:29.2322|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-26 23:38:56.4488|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-26 23:38:56.5635|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-26 23:38:56.5787|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-26 23:38:56.5787|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-26 23:38:56.6030|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-26 23:39:16.0786|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-26 23:41:54.5254|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-26 23:41:54.7035|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-26 23:41:54.7434|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-26 23:41:54.7783|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-26 23:41:54.8891|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-26 23:44:00.8309|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-26 23:44:00.9059|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-26 23:44:00.9235|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-26 23:44:00.9235|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-26 23:44:00.9363|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-26 23:44:19.7210|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-26 23:45:15.8504|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-26 23:45:15.9227|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-26 23:45:15.9227|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-26 23:45:15.9227|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-26 23:45:15.9369|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-26 23:46:01.5651|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-26 23:46:22.9003|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-26 23:46:23.0758|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-26 23:46:23.1563|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-26 23:46:23.2537|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-26 23:46:23.3453|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-26 23:48:28.4779|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-26 23:48:28.5828|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-26 23:48:28.6006|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-26 23:48:28.6089|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-26 23:48:28.6089|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-26 23:51:12.9299|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-26 23:51:13.0550|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-26 23:51:13.3596|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-26 23:51:13.4235|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-26 23:51:13.4980|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform

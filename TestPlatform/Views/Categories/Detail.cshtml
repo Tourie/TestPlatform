@@ -1,0 +1,24 @@
+﻿@model CategoryTestsViewModel
+
+@{
+    ViewData["Title"] = "Тесты по категории";
+}
+
+<h1>Категория: @Model.Category.Name</h1>
+@if (Model.Tests == null || Model.Tests.Count()==0)
+{
+    <h2>Тестов в данной категории пока нет :(</h2>
+}
+else
+{
+    <table cellspacing="1" cellpadding="4">
+        @foreach (var test in Model.Tests)
+        {
+            <tr>
+                <td align="left">@test.Name</td>
+                <td align="left">Время: @test.Time мин.</td>
+                <td align="right"><a class="btn btn-primary">Подробнее</a></td>
+            </tr>
+        }
+    </table>
+}

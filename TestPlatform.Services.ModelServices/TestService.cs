@@ -4,6 +4,8 @@ using System.Text;
 using TestPlatform.Core;
 using TestPlatform.Services.Interfaces;
 using TestPlatform.Infrastructure.Data;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace TestPlatform.Services.ModelServices
 {
@@ -42,6 +44,11 @@ namespace TestPlatform.Services.ModelServices
         public void UpdateTest(Test item)
         {
             _repository.Update(item);
+        }
+
+        public IEnumerable<Test> GetTestsByCategory(Category category)
+        {
+            return _repository.GetContext().Categories.Include(categ => categ.Tests).FirstOrDefault(c=>c.Id == category.Id).Tests;
         }
     }
 }

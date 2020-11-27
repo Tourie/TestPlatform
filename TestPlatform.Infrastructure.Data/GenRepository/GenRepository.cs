@@ -62,5 +62,9 @@ namespace TestPlatform.Infrastructure.Data.Repositories
             _db.Entry(item).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             this.Save();
         }
+        public ApplicationContext GetContext()
+        {
+            return this._db;
+        }
     }
 }

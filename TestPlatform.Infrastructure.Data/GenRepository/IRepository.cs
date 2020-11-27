@@ -12,6 +12,7 @@ namespace TestPlatform.Infrastructure.Data
         void Delete(int id);
         IEnumerable<T> GetAll();
         T GetItem(int id);
+        public ApplicationContext GetContext();
         void Save();
     }
 }
