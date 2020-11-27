@@ -58,7 +58,8 @@ namespace TestPlatform.Contollers
         [HttpGet]
         public IActionResult Detail(int id)
         {
-            return View();
+            var test = _TestService.GetTest(id);
+            return View(test);
         }
     }
 }

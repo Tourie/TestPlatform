@@ -33,7 +33,7 @@ namespace TestPlatform.Services.ModelServices
 
         public Test GetTest(int id)
         {
-            return _repository.GetItem(id);
+            return _repository.GetContext().Tests.Include(test => test.Categories).FirstOrDefault(test => test.Id == id);
         }
 
         public void Save()
