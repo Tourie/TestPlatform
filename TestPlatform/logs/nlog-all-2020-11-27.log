@@ -147,3 +147,41 @@ CREATE TABLE [Tests] (
 2020-11-27 12:42:09.5645|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2020-11-27 12:42:09.5645|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
 2020-11-27 12:42:09.5645|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-27 12:51:19.2500|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-27 12:51:19.2874|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-27 12:51:19.2935|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-27 12:51:19.2935|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-27 12:51:19.3110|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-27 12:55:00.5761|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-27 12:55:00.6328|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-27 12:55:00.6385|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-27 12:55:00.6385|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-27 12:55:00.6385|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-27 12:56:07.7940|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-27 12:56:07.8386|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-27 12:56:07.8429|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-27 12:56:07.8429|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-27 12:56:07.8429|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-27 12:56:41.0521|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-11-27 12:59:07.3446|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-27 12:59:07.3797|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-27 12:59:07.3889|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-27 12:59:07.3889|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-27 12:59:07.3889|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-27 12:59:24.5591|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-27 12:59:24.6129|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-27 12:59:24.6129|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-27 12:59:24.6129|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-27 12:59:24.6229|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-27 13:15:06.4524|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-27 13:15:06.4882|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-27 13:15:06.4882|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-27 13:15:06.4992|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-27 13:15:06.4992|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-27 13:15:14.1871|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-11-27 13:28:49.7174|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-27 13:28:49.7622|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-27 13:28:49.7622|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-27 13:28:49.7622|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-27 13:28:49.7622|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-11-27 13:29:06.6878|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'

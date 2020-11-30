@@ -13,6 +13,7 @@ namespace TestPlatform.Services.Interfaces
         IEnumerable<Test> GetAll();
         IEnumerable<Test> GetTestsByCategory(Category category);
         Test GetTest(int id);
+        void AddQuestion(Question question, int id);
         void Save();
     }
 }

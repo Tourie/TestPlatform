@@ -29,12 +29,12 @@ namespace TestPlatform.Contollers
         [HttpGet]
         public IActionResult Create()
         {
-            var testCreateViewModel = new TestCreateViewModel() { Categories = _CategoryService.GetAll() };
+            var testCreateViewModel = new TestViewModel() { Categories = _CategoryService.GetAll() };
             return View(testCreateViewModel);
         }
 
         [HttpPost]
-        public IActionResult Create(TestCreateViewModel viewModel)
+        public IActionResult Create(TestViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
@@ -46,7 +46,7 @@ namespace TestPlatform.Contollers
                 }
                 Test test = new Test() { Name = viewModel.Name, Description = viewModel.Description, Time = viewModel.Time, Categories = testCategories };
                 _TestService.CreateTest(test);
-                return RedirectToAction("Index", "Tests");
+                return RedirectToAction("Update", "Tests", new { Test = test });
             }
             else
             {
@@ -60,6 +60,56 @@ namespace TestPlatform.Contollers
         {
             var test = _TestService.GetTest(id);
             return View(test);
+        }
+
+        [HttpGet]
+        public IActionResult Solve(int? id)
+        {
+            if (id.HasValue)
+            {
+                return RedirectToAction("Detail", "Tests", new { id = id });
+            }
+            else
+            {
+                return RedirectToAction("Index", "Tests");
+            }
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public string Solve(int id)
+        {
+            var test = _TestService.GetTest(id);
+            return $"Test {test.Name} is running";
+        }
+
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            var test = _TestService.GetTest(id);
+            var viewModel = new TestViewModel() { Id=id, Name = test.Name, Time = test.Time, Categories = test.Categories, Description = test.Description, Questions=test.Questions };
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        public IActionResult AddQuestion(int id)
+        {
+            var test = _TestService.GetTest(id);
+            if (test != null)
+            {
+                var answers = new List<Answer>() { new Answer() { Name = "Ответ 1" }, new Answer() { Name = "Ответ 2" }, new Answer() { Name = "Ответ 3" } };
+                var viewModel = new QuestionViewModel() { Answers = answers, TestId=id };
+                return View(viewModel);
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        public IActionResult AddQuestion(QuestionViewModel viewModel, int id)
+        {
+            
+            var question = new Question() { Name = viewModel.Name, Answers = viewModel.Answers };
+            _TestService.AddQuestion(question, id);
+            return RedirectToAction("Update", "Tests", new { id = id });
         }
     }
 }

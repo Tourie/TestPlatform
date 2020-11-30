@@ -7,8 +7,11 @@ using TestPlatform.Core;
 
 namespace TestPlatform.WEB.ViewModels
 {
-    public class TestCreateViewModel
+    public class TestViewModel
     {
+        [Display(Name="Id")]
+        public int Id { get; set; }
+
         [Required]
         [Display(Name = "Name")]
         public string Name { get; set; }
@@ -25,5 +28,6 @@ namespace TestPlatform.WEB.ViewModels
         [Display(Name = "Category")]
         public int[] TestCategory { get;set; }
         public IEnumerable<Category> Categories { get; set; }
+        public IEnumerable<Question> Questions { get; set; }
     }
 }

@@ -1,0 +1,42 @@
+﻿@model TestViewModel
+
+@{
+    ViewData["Title"] = "Изменить тест";
+}
+
+<h1>Изменить тест</h1>
+<form asp-antiforgery="true" asp-controller="Tests" asp-action="Update" method="post">
+    <div asp-validation-summary="ModelOnly" style="color: red;"></div>
+    <div>
+        <input asp-for="Name" placeholder="Название теста" value=@Model.Name/>
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <textarea asp-for="Description" placeholder="Описание теста">@Model.Description</textarea>
+        <span asp-validation-for="Description"></span>
+    </div>
+    <div>
+        <input type="number" asp-for="Time" placeholder="Время(в мин)" value=@Model.Time/>
+        <span asp-validation-for="Time"></span>
+    </div>
+    <div>
+        <h3>Список вопросов:</h3>
+        @if(Model.Questions == null)
+        {
+            <p>Тест пока без вопросов.</p>
+        }
+        else
+        {
+            @foreach(var question in Model.Questions)
+            {
+                <h6>@question.Name</h6>
+                <a class="small button" asp-action="UpdateQuestion" asp-controller="Tests" asp-route-id="@question.Id">Редактировать вопрос</a>
+            }
+        }
+        <a class="button" asp-action="AddQuestion" asp-controller="Tests" asp-route-id="@Model.Id">Добавить вопрос</a>
+    </div>
+    <div>
+        <input type="submit" value="Сохранить и выйти" class="button primary"/>
+    </div>
+</form>
+<a asp-action="Index" asp-controller="Tests" class="button">Выйти</a>

@@ -33,9 +33,10 @@ namespace TestPlatform.Services.ModelServices
 
         public Test GetTest(int id)
         {
-            return _repository.GetContext().Tests.Include(test => test.Categories).FirstOrDefault(test => test.Id == id);
+            return _repository.GetContext().Tests.Include(test => test.Categories)
+                                            .Include(test=>test.Questions)
+                                            .FirstOrDefault(test => test.Id == id);
         }
-
         public void Save()
         {
             _repository.Save();
@@ -49,6 +50,19 @@ namespace TestPlatform.Services.ModelServices
         public IEnumerable<Test> GetTestsByCategory(Category category)
         {
             return _repository.GetContext().Categories.Include(categ => categ.Tests).FirstOrDefault(c=>c.Id == category.Id).Tests;
+        }
+        
+        public void AddQuestion(Question question,int id)
+        {
+            var test = _repository.GetItem(id);
+            if (test != null)
+            {
+                List<Question> questions = _repository.GetContext().Tests.Include(test => test.Questions).FirstOrDefault(test => test.Id == id).Questions.ToList()
+                    ?? new List<Question>();
+                questions.Add(question);
+                test.Questions = questions;
+                this.UpdateTest(test);
+            }
         }
     }
 }

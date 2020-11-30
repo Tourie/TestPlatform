@@ -1,4 +1,4 @@
-﻿@model TestCreateViewModel
+﻿@model TestViewModel
 
 @{
     ViewData["Title"] = "Новый тест";
@@ -8,7 +8,7 @@
 <form asp-antiforgery="true" asp-controller="Tests" asp-action="Create" method="post">
     <div asp-validation-summary="ModelOnly" style="color: red;"></div>
     <div>
-        <input asp-for="Name" placeholder="Название теста" />
+        <input asp-for="Name" placeholder="Название теста" value="@Model.Name"/>
         <span asp-validation-for="Name"></span>
     </div>
     <div>

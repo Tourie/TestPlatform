@@ -1,0 +1,23 @@
+﻿@model QuestionViewModel
+
+@{ 
+    ViewData["Title"] = "Добавить вопрос";
+}
+
+<h1>Добавление вопроса:</h1>
+<form method="post" asp-action="AddQuestion" asp-controller="Tests">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div><input type="text" placeholder="Название вопроса" asp-for="@Model.Name" /></div>
+    <div>
+        <h6>Варианты ответов:</h6>
+        @if (Model.Answers != null)
+        {
+            @foreach (var answer in Model.Answers)
+            {
+                <input asp-for="@Model.Answers" value="@answer.Name" />
+            }
+        }
+    </div>
+    <button class="button primary" type="submit" asp-route-id="@Model.TestId">Добавить</button>
+</form>
+<a class="button" asp-action="Update" asp-controller="Tests" asp-route-id="@Model.TestId">Назад</a>
