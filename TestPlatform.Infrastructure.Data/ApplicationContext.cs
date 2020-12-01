@@ -56,6 +56,23 @@ namespace TestPlatform.Infrastructure.Data
 
                     new Question{ Id=5, Name="1 вопрос 3 теста", Testid=3/*, Test=Tests.Find(3)*/ },
                 });
+
+            modelBuilder.Entity<Answer>().HasData(
+                new Answer[]
+                {
+                    new Answer{ Id=1, Name="1 ответ 1 вопроса", QuestionId=1/*, Test=Tests.Find(1)*/ },
+                    new Answer{ Id=2, Name="2 ответ 1 вопроса", QuestionId=1/*, Test=Tests.Find(1)*/ },
+                    new Answer{ Id=3, Name="1 ответ 2 вопроса", QuestionId=2/*, Test=Tests.Find(1)*/ },
+                    new Answer{ Id=4, Name="2 ответ 2 вопроса", QuestionId=2/*, Test=Tests.Find(1)*/ },
+
+                    new Answer{ Id=5, Name="1 ответ", QuestionId=3/*, Test=Tests.Find(1)*/ },
+                    new Answer{ Id=6, Name="2 ответ", QuestionId=3/*, Test=Tests.Find(1)*/ },
+                    new Answer{ Id=7, Name="1 ответ", QuestionId=4/*, Test=Tests.Find(1)*/ },
+                    new Answer{ Id=8, Name="2 ответ", QuestionId=4/*, Test=Tests.Find(1)*/ },
+
+                    new Answer{ Id=9, Name="1 овтет", QuestionId=5/*, Test=Tests.Find(1)*/ },
+                    new Answer{ Id=10, Name="2 ответ", QuestionId=5/*, Test=Tests.Find(1)*/ },
+                });
             modelBuilder.Entity<User>().HasData(
                 new User
                 {
