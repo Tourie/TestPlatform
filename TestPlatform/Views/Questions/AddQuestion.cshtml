@@ -10,13 +10,19 @@
     <div><input type="text" placeholder="Название вопроса" asp-for="@Model.Name" /></div>
     <div>
         <h6>Варианты ответов:</h6>
-        @if (Model.Answers != null)
-        {
-            @foreach (var (answer,index) in Model.Answers.Select((answer, index)=> (answer,index)))
+        <table cellspacing="1" cellpadding="4">
+            @if (Model.Answers != null)
             {
-                <input type="text" name="Answers[@index].Name" value="@answer.Name" />
+                @foreach (var (answer, index) in Model.Answers.Select((answer, index) => (answer, index)))
+                {
+                    <tr>
+                        <td><input type="text" name="Answers[@index].Name" value="@answer.Name" /></td>
+                        <td><a>Удалить</a></td>
+                    </tr>
+                }
             }
-        }
+
+        </table>
     </div>
     <button class="button primary" type="submit" asp-route-testId="@Model.TestId">Добавить</button>
 </form>

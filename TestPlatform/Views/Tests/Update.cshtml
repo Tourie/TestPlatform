@@ -27,14 +27,18 @@
         }
         else
         {
-            @foreach(var question in Model.Questions)
-            {
-                <h6>@question.Name</h6>
-                <a class="small button" asp-action="UpdateQuestion" asp-controller="Questions" asp-route-id="@question.Id">Редактировать вопрос</a>
-            }
+            <table cellspacing="1" cellpadding="4">
+                @foreach (var question in Model.Questions)
+                {
+                    <tr>
+                        <td align="left">@question.Name</td>
+                        <td align="left"><a class="small button" asp-action="UpdateQuestion" asp-controller="Questions" asp-route-id="@question.Id">Редактировать вопрос</a></td>
+                    </tr>
+                }
+            </table>
         }
-        <a class="button" asp-action="AddQuestion" asp-controller="Questions" asp-route-id="@Model.Id">Добавить вопрос</a>
-    </div>
+        <a class="button" asp-action="AddQuestion" asp-controller="Questions" asp-route-testId="@Model.Id">Добавить вопрос</a>
+</div>
     <div>
         <input type="submit" value="Сохранить и выйти" class="button primary"/>
     </div>
