@@ -46,6 +46,7 @@ namespace TestPlatform
             services.AddScoped(typeof(IRepository<>), typeof(GenRepository<>));
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<ITestService, TestService>();
+            services.AddTransient<IQuestionService, QuestionService>();
         }
         
 

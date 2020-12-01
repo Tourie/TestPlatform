@@ -21,9 +21,8 @@ namespace TestPlatform.Services.ModelServices
             using (var client = new SmtpClient())
             {
                 await client.ConnectAsync("smtp.gmail.com", 25, false);
-                await client.AuthenticateAsync("makar.pundis@gmail.com", "*");
+                await client.AuthenticateAsync("test.platform.proj@gmail.com", "Qwerty15*");
                 await client.SendAsync(emailMessage);
-
                 await client.DisconnectAsync(true);
             }
         }
