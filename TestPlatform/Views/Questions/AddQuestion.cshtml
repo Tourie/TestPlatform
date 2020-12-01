@@ -5,7 +5,7 @@
 }
 
 <h1>Добавление вопроса:</h1>
-<form method="post" asp-action="AddQuestion" asp-controller="Tests">
+<form method="post" asp-action="AddQuestion" asp-controller="Questions">
     <div asp-validation-summary="ModelOnly"></div>
     <div><input type="text" placeholder="Название вопроса" asp-for="@Model.Name" /></div>
     <div>
@@ -18,6 +18,6 @@
             }
         }
     </div>
-    <button class="button primary" type="submit" asp-route-id="@Model.TestId">Добавить</button>
+    <button class="button primary" type="submit" asp-route-testId="@Model.TestId">Добавить</button>
 </form>
-<a class="button" asp-action="Update" asp-controller="Tests" asp-route-id="@Model.TestId">Назад</a>
+<a class="button" asp-action="Update" asp-controller="Tests" asp-route-testId="@Model.TestId">Назад</a>

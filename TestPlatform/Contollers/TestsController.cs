@@ -15,12 +15,10 @@ namespace TestPlatform.Contollers
     {
         private ITestService _TestService { get; set; }
         private ICategoryService _CategoryService { get; set; }
-        private IQuestionService _QuestionService { get; set; }
-        public TestsController(ITestService testService, ICategoryService categoryService, IQuestionService questionService)
+        public TestsController(ITestService testService, ICategoryService categoryService)
         {
             _TestService = testService;
             _CategoryService = categoryService;
-            _QuestionService = questionService;
         }
 
         public IActionResult Index()
@@ -105,75 +103,8 @@ namespace TestPlatform.Contollers
             return View(viewModel);
         }
 
-        [HttpGet]
-        public IActionResult AddQuestion(int? id)
-        {
-            if (!id.HasValue)
-            {
-                return NotFound();
-            }
-            else
-            {
-                var test = _TestService.GetTest(id.Value);
-                if (test != null)
-                {
-                    var answers = new Answer[] { new Answer() { Name = "Ответ 1" }, new Answer() { Name = "Ответ 2" }, new Answer() { Name = "Ответ 3" } };
-                    var viewModel = new QuestionViewModel() { Answers = answers, TestId = id.Value };
-                    return View(viewModel);
-                }
-                return NotFound();
-            }
-        }
+     
 
-        [HttpPost]
-        public IActionResult AddQuestion(QuestionViewModel viewModel, int id)
-        {
-            var test = _TestService.GetTest(id);
-            if (ModelState.IsValid && test != null)
-            {
-                var question = new Question() { Name = viewModel.Name, Answers = viewModel.Answers, Test=test };
-                _QuestionService.CreateQuestion(question);
-                return RedirectToAction("Update", "Tests", new { id = id });
-            }
-            else
-            {
-                ModelState.AddModelError(String.Empty, "Все поля должны быть заполнены");
-            }
-            viewModel.TestId = id;
-            return View(viewModel);
-        }
-
-        [HttpGet]
-        public IActionResult UpdateQuestion(int? id)
-        {
-            if (!id.HasValue)
-            {
-                return NotFound();
-            }
-            else
-            {
-                var question = _QuestionService.GetQuestion(id.Value);
-                if (question != null)
-                {
-                    var viewModel = new QuestionViewModel() { Answers = question.Answers, TestId = question.Testid  };
-                    return View(viewModel);
-                }
-                return NotFound();
-            }
-        }
-
-        [HttpPost]
-        public IActionResult UpdateQuestion(QuestionViewModel viewModel, int? id)
-        {
-            var question = id.HasValue ? _QuestionService.GetQuestion(id.Value) : null;
-            if (ModelState.IsValid && question != null)
-            {
-                question.Name = viewModel.Name;
-                question.Answers = viewModel.Answers;
-                _QuestionService.UpdateQuestion(question);
-                return RedirectToAction("Update", "Tests", new { id = question.Testid });
-            }
-            return NotFound();
-        }
+        
     }
 }

@@ -2,3 +2,5 @@
 2020-12-01 11:49:04.9378|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
 2020-12-01 18:52:50.6530|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'UpdateQuestion' was not found. Searched locations: /Views/Tests/UpdateQuestion.cshtml, /Views/Shared/UpdateQuestion.cshtml, /Pages/Shared/UpdateQuestion.cshtml
 2020-12-01 18:52:50.7668|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-12-01 22:38:40.8663|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'UpdateQuestion' was not found. Searched locations: /Views/Questions/UpdateQuestion.cshtml, /Views/Shared/UpdateQuestion.cshtml, /Pages/Shared/UpdateQuestion.cshtml
+2020-12-01 22:38:41.0413|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.

@@ -179,3 +179,17 @@
 2020-12-01 22:08:38.1455|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
 2020-12-01 22:08:38.1613|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
 2020-12-01 22:08:49.5817|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-01 22:36:24.5792|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-01 22:36:24.6530|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-01 22:36:24.6530|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-01 22:36:24.6530|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-01 22:36:24.6698|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-01 22:38:35.0247|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-01 22:38:40.8663|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'UpdateQuestion' was not found. Searched locations: /Views/Questions/UpdateQuestion.cshtml, /Views/Shared/UpdateQuestion.cshtml, /Pages/Shared/UpdateQuestion.cshtml
+2020-12-01 22:38:41.0413|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-12-01 22:40:43.5809|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-01 22:40:43.6575|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-01 22:40:43.6700|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-01 22:40:43.6700|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-01 22:40:43.6857|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-01 22:40:56.8403|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
