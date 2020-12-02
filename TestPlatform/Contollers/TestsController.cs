@@ -103,8 +103,16 @@ namespace TestPlatform.Contollers
             return View(viewModel);
         }
 
-     
-
-        
+        [HttpGet]
+        public IActionResult Delete(int? id)
+        {
+            var test = id.HasValue ? _TestService.GetTest(id.Value) : null;
+            if (test != null)
+            {
+                _TestService.DeleteTest(id.Value);
+                return RedirectToAction("Index", "Tests");
+            }
+            return NotFound();
+        }
     }
 }

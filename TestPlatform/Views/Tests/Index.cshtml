@@ -13,6 +13,7 @@
             <td align="left">@test.Name</td>
             <td align="left">Время: @test.Time мин.</td>
             <td align="right"><a class="btn btn-primary" asp-controller="Tests" asp-action="Detail" asp-route-id="@test.Id">Подробнее</a></td>
+            <td align="right"><a class="btn btn-danger" asp-controller="Tests" asp-action="Delete" asp-route-id="@test.Id">Удалить</a></td>
         </tr>
     }
 </table>
