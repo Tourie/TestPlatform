@@ -32,7 +32,9 @@
                 {
                     <tr>
                         <td align="left">@question.Name</td>
-                        <td align="left"><a class="small button" asp-action="UpdateQuestion" asp-controller="Questions" asp-route-id="@question.Id">Редактировать вопрос</a></td>
+                        <td align="left"><a class="small button" asp-action="Update" asp-controller="Questions" asp-route-id="@question.Id">Редактировать</a></td>
+                        <td align="right"><a class="btn btn-danger" asp-action="Delete" asp-controller="Questions" asp-route-id="@question.Id">
+                             Удалить</a></td>
                     </tr>
                 }
             </table>

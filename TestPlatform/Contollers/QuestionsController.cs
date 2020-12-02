@@ -56,7 +56,7 @@ namespace TestPlatform.WEB.Contollers
         }
 
         [HttpGet]
-        public IActionResult UpdateQuestion(int? id)
+        public IActionResult Update(int? id)
         {
             if (!id.HasValue)
             {
@@ -75,7 +75,7 @@ namespace TestPlatform.WEB.Contollers
         }
 
         [HttpPost]
-        public IActionResult UpdateQuestion(QuestionViewModel viewModel, int? id)
+        public IActionResult Update(QuestionViewModel viewModel, int? id)
         {
             var question = id.HasValue ? _QuestionService.GetQuestion(id.Value) : null;
             if (ModelState.IsValid && question != null)
@@ -83,6 +83,18 @@ namespace TestPlatform.WEB.Contollers
                 question.Name = viewModel.Name;
                 question.Answers = viewModel.Answers;
                 _QuestionService.UpdateQuestion(question);
+                return RedirectToAction("Update", "Tests", new { id = question.Testid });
+            }
+            return NotFound();
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int? id)
+        {
+            var question = id.HasValue ? _QuestionService.GetQuestion(id.Value) : null;
+            if (question != null)
+            {
+                _QuestionService.DeleteQuestion(question.Id);
                 return RedirectToAction("Update", "Tests", new { id = question.Testid });
             }
             return NotFound();
