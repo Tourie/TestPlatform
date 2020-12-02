@@ -4,20 +4,28 @@
     ViewData["Title"] = "Редактирование вопроса";
 }
 
-<h1>Редактирование вопроса вопроса:</h1>
-<form method="post" asp-action="Update" asp-controller="Tests">
+<h1>Редактирование вопроса:</h1>
+<form method="post" asp-action="Update" asp-controller="Questions" >
     <div asp-validation-summary="ModelOnly"></div>
     <div><input type="text" placeholder="Название вопроса" asp-for="@Model.Name" /></div>
     <div>
         <h6>Варианты ответов:</h6>
-        @if (Model.Answers != null)
-        {
-            @foreach (var (answer, index) in Model.Answers.Select((answer, index) => (answer, index)))
+        <table cellspacing="1" cellpadding="4" id="dynamic_form">
+            @if (Model.Answers != null)
             {
-                <input type="text" name="Answers[@index].Name" value="@answer.Name" />
+                @foreach (var (answer, index) in Model.Answers.Select((answer, index) => (answer, index)))
+                {
+                    <tr>
+                        <td><input type="text" name="Answers[@index].Name" value="@answer.Name" class="input_member" /></td>
+                    </tr>
+                }
             }
-        }
+        </table>
     </div>
-    <button class="button primary" type="submit" asp-route-id="@Model.TestId">Обновить</button>
+    <a class="btn btn-success" onclick="addInput()">Добавить ответ</a>
+    <button class="button primary" type="submit" asp-route-id="@Model.Id">Обновить</button>
+
 </form>
 <a class="button" asp-action="Update" asp-controller="Tests" asp-route-id="@Model.TestId">Назад</a>
+
+<script src="~/js/add-input.js" type="text/javascript"></script>

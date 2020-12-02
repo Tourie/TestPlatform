@@ -39,10 +39,10 @@
                 }
             </table>
         }
-        <a class="button" asp-action="AddQuestion" asp-controller="Questions" asp-route-testId="@Model.Id">Добавить вопрос</a>
+        <a class="button" asp-action="Create" asp-controller="Questions" asp-route-testId="@Model.Id">Добавить вопрос</a>
 </div>
     <div>
-        <input type="submit" value="Сохранить и выйти" class="button primary"/>
+        <input type="submit" value="Сохранить и выйти" class="button primary" @*asp-route-id="@Model.Id"*@/>
     </div>
 </form>
 <a asp-action="Index" asp-controller="Tests" class="button">Выйти</a>

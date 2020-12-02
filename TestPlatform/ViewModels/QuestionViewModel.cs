@@ -10,6 +10,7 @@ namespace TestPlatform.WEB.ViewModels
     public class QuestionViewModel
     {
         public int TestId { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [Display(Name = "Name")]

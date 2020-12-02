@@ -90,17 +90,28 @@ namespace TestPlatform.Contollers
         [HttpGet]
         public IActionResult Update(int? id)
         {
-            if (!id.HasValue)
-            {
-                return NotFound();
-            }
-            var test = _TestService.GetTest(id.Value);
+            var test = id.HasValue ? _TestService.GetTest(id.Value) : null;
             if (test == null)
             {
                 return NotFound();
             }
             var viewModel = new TestViewModel() { Id=id.Value, Name = test.Name, Time = test.Time, Categories = test.Categories, Description = test.Description, Questions=test.Questions };
             return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Update(TestViewModel viewModel)
+        {
+            var test = _TestService.GetTest(viewModel.Id);
+            if(test != null)
+            {
+                test.Name = viewModel.Name;
+                test.Time = viewModel.Time;
+                test.Description = viewModel.Description;
+                _TestService.UpdateTest(test);
+                return RedirectToAction("Index", "Tests");
+            }
+            return NotFound();
         }
 
         [HttpGet]

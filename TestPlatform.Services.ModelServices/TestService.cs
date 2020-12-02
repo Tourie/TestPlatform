@@ -34,7 +34,7 @@ namespace TestPlatform.Services.ModelServices
         public Test GetTest(int id)
         {
             return _repository.GetContext().Tests.Include(test => test.Categories)
-                                            .Include(test=>test.Questions)
+                                            .Include(test => test.Questions)
                                             .FirstOrDefault(test => test.Id == id);
         }
         public void Save()

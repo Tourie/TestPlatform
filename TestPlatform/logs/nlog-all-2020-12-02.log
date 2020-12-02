@@ -16,3 +16,145 @@
 2020-12-02 09:51:59.3399|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
 2020-12-02 09:51:59.3399|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
 2020-12-02 09:52:10.4195|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 09:57:24.3112|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 09:57:24.3506|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 09:57:24.3572|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 09:57:24.3572|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 09:57:24.3572|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 09:57:35.1458|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 10:17:59.2875|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 10:17:59.3268|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 10:17:59.3268|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 10:17:59.3268|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 10:17:59.3268|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 10:18:16.5091|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 10:21:42.2802|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 10:21:42.3266|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 10:21:42.3266|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 10:21:42.3266|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 10:21:42.3266|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 10:21:51.7963|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 10:55:17.3422|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 10:55:17.3860|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 10:55:17.3860|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 10:55:17.3860|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 10:55:17.3860|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 10:55:25.6750|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 11:01:45.5535|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 11:01:45.5985|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 11:01:45.5985|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 11:01:45.6070|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 11:01:45.6070|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 11:01:55.8480|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 11:03:46.1636|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 11:03:46.1949|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 11:03:46.2004|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 11:03:46.2004|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 11:03:46.2004|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 11:04:59.4194|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 11:04:59.4565|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 11:04:59.4565|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 11:04:59.4648|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 11:04:59.4648|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 11:07:27.9404|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 11:09:30.8829|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 11:09:30.9788|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 11:09:31.0070|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 11:09:31.0070|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 11:09:31.0158|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 11:09:46.0046|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 11:11:34.8972|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 11:11:34.9331|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 11:11:34.9331|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 11:11:34.9331|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 11:11:34.9331|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 11:11:56.2653|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 17:15:38.9069|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 17:15:39.0056|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 17:15:39.0214|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 17:15:39.0294|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 17:15:39.0460|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 17:16:04.9056|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 17:36:02.3482|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 17:36:02.4077|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 17:36:02.4077|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 17:36:02.4077|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 17:36:02.4206|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 17:36:16.7955|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 17:38:35.8373|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 17:38:35.8924|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 17:38:35.8924|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 17:38:35.8924|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 17:38:35.9050|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 17:38:45.6366|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 17:38:45.7179|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 17:38:45.7324|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 17:38:45.7324|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 17:38:45.7324|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 17:39:44.5479|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 17:40:52.2962|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 17:40:52.3918|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 17:40:52.3918|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 17:40:52.4033|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 17:40:52.4033|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 17:41:27.5089|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 17:42:43.0646|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 17:42:43.1601|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 17:42:43.1739|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 17:42:43.1739|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 17:42:43.2261|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 17:43:03.3861|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 17:50:19.2652|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 17:50:19.3265|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 17:50:19.3265|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 17:50:19.3265|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 17:50:19.3398|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 17:50:49.1706|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 17:51:41.1535|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 17:51:41.1974|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 17:51:41.2034|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 17:51:41.2034|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 17:51:41.2034|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 17:52:07.6784|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 19:44:48.2321|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 19:44:48.3107|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 19:44:48.3107|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 19:44:48.3325|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 19:44:48.3325|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 19:45:22.0767|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 19:48:34.9074|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 19:48:35.0492|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 19:48:35.0584|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 19:48:35.0584|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 19:48:35.0584|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 19:48:56.3846|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 19:50:58.2880|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 19:50:58.3299|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 19:50:58.3299|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 19:50:58.3408|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 19:50:58.3408|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 19:51:21.5426|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 19:52:23.6986|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 19:52:23.8302|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 19:52:23.8469|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 19:52:23.8776|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 19:52:23.8776|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 19:52:50.6819|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 20:15:00.3864|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 20:15:00.4248|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 20:15:00.4248|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 20:15:00.4381|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 20:15:00.4381|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 20:15:19.7403|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 20:17:55.4001|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 20:17:55.4409|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 20:17:55.4409|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 20:17:55.4409|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 20:17:55.4517|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 20:18:17.1268|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-02 20:19:46.5696|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-02 20:19:46.6454|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-02 20:19:46.6529|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-02 20:19:46.6529|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-02 20:19:46.6529|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-02 20:20:06.8128|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'

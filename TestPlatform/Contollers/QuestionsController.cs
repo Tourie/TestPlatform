@@ -19,7 +19,7 @@ namespace TestPlatform.WEB.Contollers
             _QuestionService = questionService;
         }
         [HttpGet]
-        public IActionResult AddQuestion(int? testId)
+        public IActionResult Create(int? testId)
         {
             if (!testId.HasValue)
             {
@@ -38,7 +38,7 @@ namespace TestPlatform.WEB.Contollers
             }
         }
         [HttpPost]
-        public IActionResult AddQuestion(QuestionViewModel viewModel, int testId)
+        public IActionResult Create(QuestionViewModel viewModel, int testId)
         {
             var test = _TestService.GetTest(testId);
             if (ModelState.IsValid && test != null)
@@ -58,20 +58,15 @@ namespace TestPlatform.WEB.Contollers
         [HttpGet]
         public IActionResult Update(int? id)
         {
-            if (!id.HasValue)
+          
+            var question = id.HasValue ? _QuestionService.GetQuestion(id.Value) : null;
+            if (question != null)
             {
-                return NotFound();
+                var viewModel = new QuestionViewModel() { Answers = question.Answers, TestId = question.Testid, Id=question.Id, Name=question.Name };
+                return View(viewModel);
             }
-            else
-            {
-                var question = _QuestionService.GetQuestion(id.Value);
-                if (question != null)
-                {
-                    var viewModel = new QuestionViewModel() { Answers = question.Answers, TestId = question.Testid };
-                    return View(viewModel);
-                }
-                return NotFound();
-            }
+            return NotFound();
+           
         }
 
         [HttpPost]
@@ -99,5 +94,16 @@ namespace TestPlatform.WEB.Contollers
             }
             return NotFound();
         }
+
+        /*[HttpPost]
+        public IActionResult AddAnswer(QuestionViewModel viewModel, int? id, int? testId)
+        {
+            if(testId.HasValue)
+            {
+                viewModel.Answers.ToList().Add(new Answer() { Name="Новый ответ" });
+                return RedirectToAction("")
+            }
+            return NotFound();
+        }*/
     }
 }
