@@ -29,5 +29,8 @@ namespace TestPlatform.WEB.ViewModels
         public int[] TestCategory { get;set; }
         public IEnumerable<Category> Categories { get; set; }
         public IEnumerable<Question> Questions { get; set; }
+
+        [Display(Name = "UsersAnswers")]
+        public IEnumerable<Answer> UsersAnswers { get; set; }
     }
 }

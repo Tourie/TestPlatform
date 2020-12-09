@@ -33,9 +33,17 @@ namespace TestPlatform.Services.ModelServices
 
         public Test GetTest(int id)
         {
-            return _repository.GetContext().Tests.Include(test => test.Categories)
+            var test = _repository.GetContext().Tests.Include(test => test.Categories)
                                             .Include(test => test.Questions)
                                             .FirstOrDefault(test => test.Id == id);
+            var questions = new List<Question>();
+            foreach(var q in test.Questions)
+            {
+                var quest = _repository.GetContext().Questions.Include(p => p.Answers).First(question=>question.Id==q.Id);
+                questions.Add(quest);
+            }
+            test.Questions = questions;
+            return test;
         }
         public void Save()
         {

@@ -1,0 +1,22 @@
+﻿@model TestViewModel
+
+@{
+    ViewData["Title"] = "Тест запущен!";
+}
+
+<h1>Тест @Model.Name</h1>
+
+<form method="post" asp-controller="Tests" asp-action="Check">
+    @foreach (var (question, index) in Model.Questions.Select((item, index) => (item, index)))
+    {
+        <p><b>@(index+1). @question.Name</b></p>
+        @foreach (var (answer,answerIndex) in question.Answers.Select((item, index) => (item, index)))
+        {
+            <div>
+                <input type="radio" id="@(question.Id)@(answer.Id)" name="UsersAnswers[@index].Name" value="@answer.Name">
+                <label for="@(question.Id)@(answer.Id)">@answer.Name</label>
+            </div>
+        }
+    }
+    <button type="submit">Отправить</button>
+</form>

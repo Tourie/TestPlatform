@@ -72,7 +72,6 @@ namespace TestPlatform.Contollers
 
        
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Solve(int? id)
         {
             if (!id.HasValue)
@@ -82,7 +81,14 @@ namespace TestPlatform.Contollers
             var test = _TestService.GetTest(id.Value);
             if (test != null)
             {
-                return Content($"Test {test.Name} is running");
+                var questions = test.Questions;
+                foreach(var question in questions)
+                {
+                    question.IdRightAnswer = 0;
+                }
+                var viewModel = new TestViewModel() { Id=test.Id, Name=test.Name, Description=test.Description, Categories=test.Categories,
+                                                        Questions=questions, Time=test.Time};
+                return View(viewModel);
             }
             return NotFound();
         }
@@ -125,5 +131,12 @@ namespace TestPlatform.Contollers
             }
             return NotFound();
         }
+
+        [HttpPost]
+        public IActionResult Check(TestViewModel viewModel)
+        {
+            var usersAnswers = viewModel.UsersAnswers;
+            return Content("fds");
+        } 
     }
 }
