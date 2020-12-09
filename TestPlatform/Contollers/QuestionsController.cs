@@ -62,7 +62,8 @@ namespace TestPlatform.WEB.Contollers
             var question = id.HasValue ? _QuestionService.GetQuestion(id.Value) : null;
             if (question != null)
             {
-                var viewModel = new QuestionViewModel() { Answers = question.Answers, TestId = question.Testid, Id=question.Id, Name=question.Name };
+                var viewModel = new QuestionViewModel() { Answers = question.Answers, TestId = question.Testid, 
+                    Id=question.Id, Name=question.Name, IdRightAnswer=question.IdRightAnswer, RightAnswer=_QuestionService.GetAnswer(question.IdRightAnswer,question.Id) };
                 return View(viewModel);
             }
             return NotFound();
@@ -77,8 +78,9 @@ namespace TestPlatform.WEB.Contollers
             {
                 question.Name = viewModel.Name;
                 question.Answers = viewModel.Answers;
+                question.IdRightAnswer = viewModel.IdRightAnswer;
                 _QuestionService.UpdateQuestion(question);
-                return RedirectToAction("Update", "Tests", new { id = question.Testid });
+                return RedirectToAction("Update", "Questions", new { id = id.Value });
             }
             return NotFound();
         }
@@ -94,16 +96,5 @@ namespace TestPlatform.WEB.Contollers
             }
             return NotFound();
         }
-
-        /*[HttpPost]
-        public IActionResult AddAnswer(QuestionViewModel viewModel, int? id, int? testId)
-        {
-            if(testId.HasValue)
-            {
-                viewModel.Answers.ToList().Add(new Answer() { Name="Новый ответ" });
-                return RedirectToAction("")
-            }
-            return NotFound();
-        }*/
     }
 }

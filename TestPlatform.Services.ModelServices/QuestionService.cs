@@ -40,5 +40,18 @@ namespace TestPlatform.Services.ModelServices
         {
             _repository.Create(question);
         }
+
+        public Answer GetAnswer(int id, int question_id)
+        {
+            var question = GetQuestion(question_id);
+            foreach(var answer in question.Answers)
+            {
+                if(answer.Id == id)
+                {
+                    return answer;
+                }
+            }
+            return null;
+        }
     }
 }

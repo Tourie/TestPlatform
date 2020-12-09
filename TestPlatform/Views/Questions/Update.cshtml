@@ -15,14 +15,25 @@
             {
                 @foreach (var (answer, index) in Model.Answers.Select((answer, index) => (answer, index)))
                 {
-                    <tr>
-                        <td><input type="text" name="Answers[@index].Name" value="@answer.Name" class="input_member" /></td>
-                    </tr>
+            <tr>
+                <td><input type="text" name="Answers[@index].Name" value="@answer.Name" class="input_member" /></td>
+                <td><a onclick="deleteAnswer(@index)">Удалить</a></td>
+            </tr>
                 }
             }
         </table>
     </div>
     <a class="btn btn-success" onclick="addInput()">Добавить ответ</a>
+    <select class="form-control" asp-for="@Model.IdRightAnswer">
+        <option disabled>Выберите правильный ответ:</option>
+        @if(Model.RightAnswer != null){
+            <option selected value="@Model.RightAnswer.Id">@Model.RightAnswer.Name</option>
+        }
+        @foreach (var answer in Model.Answers)
+        {
+            <option value="@answer.Id">@answer.Name</option>
+        }
+    </select>
     <button class="button primary" type="submit" asp-route-id="@Model.Id">Обновить</button>
 
 </form>

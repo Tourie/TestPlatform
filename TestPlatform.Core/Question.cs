@@ -12,5 +12,6 @@ namespace TestPlatform.Core
         public int Testid { get; set; }
         public virtual Test Test { get; set; }
         public IEnumerable<Answer> Answers { get; set; }
+        public int IdRightAnswer { get; set; }
     }
 }

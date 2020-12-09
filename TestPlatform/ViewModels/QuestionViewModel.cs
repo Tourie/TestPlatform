@@ -19,5 +19,10 @@ namespace TestPlatform.WEB.ViewModels
         [Required]
         [Display(Name = "Answers")]
         public IEnumerable<Answer> Answers { get; set; }
+
+        [Required]
+        [Display(Name = "RightAnswer")]
+        public int IdRightAnswer { get; set; }
+        public Answer RightAnswer { get; set; }
     }
 }

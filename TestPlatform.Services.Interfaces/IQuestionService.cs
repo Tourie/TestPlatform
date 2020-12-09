@@ -12,5 +12,6 @@ namespace TestPlatform.Services.Interfaces
         void DeleteQuestion(int id);
         IEnumerable<Question> GetAll();
         Question GetQuestion(int id);
+        public Answer GetAnswer(int id, int question_id);
     }
 }

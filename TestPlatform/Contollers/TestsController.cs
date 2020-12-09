@@ -46,7 +46,7 @@ namespace TestPlatform.Contollers
                 }
                 Test test = new Test() { Name = viewModel.Name, Description = viewModel.Description, Time = viewModel.Time, Categories = testCategories };
                 _TestService.CreateTest(test);
-                return RedirectToAction("Update", "Tests", new { Test = test });
+                return RedirectToAction("Index", "Tests");
             }
             else
             {
