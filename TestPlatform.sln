@@ -13,9 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestPlatform.Infrastructure.Data", "TestPlatform.Infrastructure.Data\TestPlatform.Infrastructure.Data.csproj", "{5A679332-916C-4A9F-A55D-7001C25BF4F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPlatform.Services.ModelServices", "TestPlatform.Services.ModelServices\TestPlatform.Services.ModelServices.csproj", "{5D7DB933-B685-4903-AF6D-09258D745EE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestPlatform.Services.ModelServices", "TestPlatform.Services.ModelServices\TestPlatform.Services.ModelServices.csproj", "{5D7DB933-B685-4903-AF6D-09258D745EE6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestPlatform.Core", "TestPlatform.Core\TestPlatform.Core.csproj", "{AB35F8BB-51FD-49B9-936F-74EBCA2E39F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPlatform.BL", "TestPlatform.BL\TestPlatform.BL.csproj", "{E0BFB513-B6A8-476B-A6E9-9E3A249DC59D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{AB35F8BB-51FD-49B9-936F-74EBCA2E39F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB35F8BB-51FD-49B9-936F-74EBCA2E39F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB35F8BB-51FD-49B9-936F-74EBCA2E39F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0BFB513-B6A8-476B-A6E9-9E3A249DC59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0BFB513-B6A8-476B-A6E9-9E3A249DC59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0BFB513-B6A8-476B-A6E9-9E3A249DC59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0BFB513-B6A8-476B-A6E9-9E3A249DC59D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

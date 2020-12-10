@@ -62,8 +62,9 @@ namespace TestPlatform.WEB.Contollers
             var question = id.HasValue ? _QuestionService.GetQuestion(id.Value) : null;
             if (question != null)
             {
+                var rightAnswer = _QuestionService.GetRightAnswer(question.Id);
                 var viewModel = new QuestionViewModel() { Answers = question.Answers, TestId = question.Testid, 
-                    Id=question.Id, Name=question.Name, IdRightAnswer=question.IdRightAnswer, RightAnswer=_QuestionService.GetAnswer(question.IdRightAnswer,question.Id) };
+                    Id=question.Id, Name=question.Name, RightAnswer=rightAnswer };
                 return View(viewModel);
             }
             return NotFound();
@@ -78,7 +79,11 @@ namespace TestPlatform.WEB.Contollers
             {
                 question.Name = viewModel.Name;
                 question.Answers = viewModel.Answers;
-                question.IdRightAnswer = viewModel.IdRightAnswer;
+                foreach(var q in question.Answers)
+                {
+                    if (q.Name == viewModel.NameRightAnswer) q.isTruth = true;
+                    else q.isTruth = false;
+                }
                 _QuestionService.UpdateQuestion(question);
                 return RedirectToAction("Update", "Questions", new { id = id.Value });
             }

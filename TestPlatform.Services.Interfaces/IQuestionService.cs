@@ -13,5 +13,6 @@ namespace TestPlatform.Services.Interfaces
         IEnumerable<Question> GetAll();
         Question GetQuestion(int id);
         public Answer GetAnswer(int id, int question_id);
+        public Answer GetRightAnswer(int questionId);
     }
 }

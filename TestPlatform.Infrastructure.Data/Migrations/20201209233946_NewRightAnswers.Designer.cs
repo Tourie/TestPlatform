@@ -10,8 +10,8 @@ using TestPlatform.Infrastructure.Data;
 namespace TestPlatform.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20201209143032_RightAnswers")]
-    partial class RightAnswers
+    [Migration("20201209233946_NewRightAnswers")]
+    partial class NewRightAnswers
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -251,6 +251,9 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                     b.Property<int>("QuestionId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("isTruth")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.HasIndex("QuestionId");
@@ -262,61 +265,71 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         {
                             Id = 1,
                             Name = "1 ответ 1 вопроса",
-                            QuestionId = 1
+                            QuestionId = 1,
+                            isTruth = false
                         },
                         new
                         {
                             Id = 2,
                             Name = "2 ответ 1 вопроса",
-                            QuestionId = 1
+                            QuestionId = 1,
+                            isTruth = false
                         },
                         new
                         {
                             Id = 3,
                             Name = "1 ответ 2 вопроса",
-                            QuestionId = 2
+                            QuestionId = 2,
+                            isTruth = false
                         },
                         new
                         {
                             Id = 4,
                             Name = "2 ответ 2 вопроса",
-                            QuestionId = 2
+                            QuestionId = 2,
+                            isTruth = false
                         },
                         new
                         {
                             Id = 5,
                             Name = "1 ответ",
-                            QuestionId = 3
+                            QuestionId = 3,
+                            isTruth = false
                         },
                         new
                         {
                             Id = 6,
                             Name = "2 ответ",
-                            QuestionId = 3
+                            QuestionId = 3,
+                            isTruth = false
                         },
                         new
                         {
                             Id = 7,
                             Name = "1 ответ",
-                            QuestionId = 4
+                            QuestionId = 4,
+                            isTruth = false
                         },
                         new
                         {
                             Id = 8,
                             Name = "2 ответ",
-                            QuestionId = 4
+                            QuestionId = 4,
+                            isTruth = false
                         },
                         new
                         {
                             Id = 9,
                             Name = "1 овтет",
-                            QuestionId = 5
+                            QuestionId = 5,
+                            isTruth = false
                         },
                         new
                         {
                             Id = 10,
                             Name = "2 ответ",
-                            QuestionId = 5
+                            QuestionId = 5,
+                            isTruth = false
                         });
                 });
 
@@ -473,13 +486,13 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         {
                             Id = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c735383b-a412-436a-8a6c-a27011911adb",
+                            ConcurrencyStamp = "09e2f6c8-f404-4297-aaa7-c0270028ab4b",
                             Email = "email@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "EMAIL@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAENEmYMLnlBm5DRTk6WJkGnzm9fijS3AzctjcYAsATSYfYAE6pkvzl4PoPXoi3nxI8Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHAYRlwWoJwqT8Yk6r5ha7i+6FsLN5B+UDz3MyqcGhcmc56BSBFScV9l3+0DvsMKBg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

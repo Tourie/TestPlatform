@@ -21,8 +21,8 @@ namespace TestPlatform.WEB.ViewModels
         public IEnumerable<Answer> Answers { get; set; }
 
         [Required]
-        [Display(Name = "RightAnswer")]
-        public int IdRightAnswer { get; set; }
+        [Display(Name = "NameRightAnswer")]
+        public string NameRightAnswer { get; set; }
         public Answer RightAnswer { get; set; }
     }
 }

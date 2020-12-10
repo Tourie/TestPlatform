@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TestPlatform.Services.Interfaces\TestPlatform.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\TestPlatform.Services.ModelServices\TestPlatform.Services.ModelServices.csproj" />
+  </ItemGroup>
+
+</Project>

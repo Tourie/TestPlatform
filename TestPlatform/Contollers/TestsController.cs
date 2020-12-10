@@ -7,6 +7,7 @@ using TestPlatform.Core;
 using TestPlatform.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using TestPlatform.WEB.ViewModels;
+using TestPlatform.BL;
 
 namespace TestPlatform.Contollers
 {
@@ -82,10 +83,6 @@ namespace TestPlatform.Contollers
             if (test != null)
             {
                 var questions = test.Questions;
-                foreach(var question in questions)
-                {
-                    question.IdRightAnswer = 0;
-                }
                 var viewModel = new TestViewModel() { Id=test.Id, Name=test.Name, Description=test.Description, Categories=test.Categories,
                                                         Questions=questions, Time=test.Time};
                 return View(viewModel);
@@ -133,10 +130,19 @@ namespace TestPlatform.Contollers
         }
 
         [HttpPost]
-        public IActionResult Check(TestViewModel viewModel)
+        public IActionResult Check(TestViewModel viewModel, int? id)
         {
-            var usersAnswers = viewModel.UsersAnswers;
-            return Content("fds");
+            if (id.HasValue)
+            {
+                var usersAnswers = viewModel.UsersAnswers;
+                var test = _TestService.GetTest(id.Value);
+                int result = ValidateTestsResults.Check(usersAnswers, test);
+                return Content(result.ToString());
+            }
+            else
+            {
+                return NotFound();
+            }
         } 
     }
 }

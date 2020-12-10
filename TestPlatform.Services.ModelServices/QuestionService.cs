@@ -53,5 +53,15 @@ namespace TestPlatform.Services.ModelServices
             }
             return null;
         }
+
+        public Answer GetRightAnswer(int questionId)
+        {
+            var question = GetQuestion(questionId);
+            foreach(var answer in question.Answers)
+            {
+                if (answer.isTruth) return answer;
+            }
+            return null;
+        }
     }
 }

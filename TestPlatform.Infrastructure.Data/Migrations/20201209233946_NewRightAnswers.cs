@@ -2,7 +2,7 @@
 
 namespace TestPlatform.Infrastructure.Data.Migrations
 {
-    public partial class RightAnswers : Migration
+    public partial class NewRightAnswers : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,21 +13,28 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                 nullable: false,
                 defaultValue: 0);
 
+            migrationBuilder.AddColumn<bool>(
+                name: "isTruth",
+                table: "Answers",
+                type: "bit",
+                nullable: false,
+                defaultValue: false);
+
             migrationBuilder.InsertData(
                 table: "Answers",
-                columns: new[] { "Id", "Name", "QuestionId" },
+                columns: new[] { "Id", "Name", "QuestionId", "isTruth" },
                 values: new object[,]
                 {
-                    { 1, "1 ответ 1 вопроса", 1 },
-                    { 2, "2 ответ 1 вопроса", 1 },
-                    { 3, "1 ответ 2 вопроса", 2 },
-                    { 4, "2 ответ 2 вопроса", 2 },
-                    { 5, "1 ответ", 3 },
-                    { 6, "2 ответ", 3 },
-                    { 7, "1 ответ", 4 },
-                    { 8, "2 ответ", 4 },
-                    { 9, "1 овтет", 5 },
-                    { 10, "2 ответ", 5 }
+                    { 1, "1 ответ 1 вопроса", 1, false },
+                    { 2, "2 ответ 1 вопроса", 1, false },
+                    { 3, "1 ответ 2 вопроса", 2, false },
+                    { 4, "2 ответ 2 вопроса", 2, false },
+                    { 5, "1 ответ", 3, false },
+                    { 6, "2 ответ", 3, false },
+                    { 7, "1 ответ", 4, false },
+                    { 8, "2 ответ", 4, false },
+                    { 9, "1 овтет", 5, false },
+                    { 10, "2 ответ", 5, false }
                 });
 
             migrationBuilder.UpdateData(
@@ -35,7 +42,7 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                 keyColumn: "Id",
                 keyValue: "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
                 columns: new[] { "ConcurrencyStamp", "PasswordHash" },
-                values: new object[] { "c735383b-a412-436a-8a6c-a27011911adb", "AQAAAAEAACcQAAAAENEmYMLnlBm5DRTk6WJkGnzm9fijS3AzctjcYAsATSYfYAE6pkvzl4PoPXoi3nxI8Q==" });
+                values: new object[] { "09e2f6c8-f404-4297-aaa7-c0270028ab4b", "AQAAAAEAACcQAAAAEHAYRlwWoJwqT8Yk6r5ha7i+6FsLN5B+UDz3MyqcGhcmc56BSBFScV9l3+0DvsMKBg==" });
 
             migrationBuilder.UpdateData(
                 table: "Questions",
@@ -128,6 +135,10 @@ namespace TestPlatform.Infrastructure.Data.Migrations
             migrationBuilder.DropColumn(
                 name: "IdRightAnswer",
                 table: "Questions");
+
+            migrationBuilder.DropColumn(
+                name: "isTruth",
+                table: "Answers");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",

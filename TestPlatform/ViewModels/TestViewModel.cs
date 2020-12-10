@@ -31,6 +31,6 @@ namespace TestPlatform.WEB.ViewModels
         public IEnumerable<Question> Questions { get; set; }
 
         [Display(Name = "UsersAnswers")]
-        public IEnumerable<Answer> UsersAnswers { get; set; }
+        public Dictionary<int,int> UsersAnswers { get; set; }
     }
 }
