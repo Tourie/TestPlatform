@@ -5,6 +5,7 @@ using System.Text;
 using TestPlatform.Core;
 using TestPlatform.Infrastructure.Data;
 using TestPlatform.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace TestPlatform.Services.ModelServices
 {
@@ -22,12 +23,12 @@ namespace TestPlatform.Services.ModelServices
 
         public IEnumerable<TestResult> GetTestResults(Test test)
         {
-            return _repository.GetContext().testResults.Where(result => result.Test.Id == test.Id);
+            return _repository.GetContext().testResults.Where(result => result.TestId == test.Id).ToList();
         }
 
         public IEnumerable<TestResult> GetUserResults(string user_id)
         {
-            return _repository.GetContext().testResults.Where(result => result.User.Id == user_id);
+            return _repository.GetContext().testResults.Where(result => result.UserId == user_id).ToList();
         }
     }
 }

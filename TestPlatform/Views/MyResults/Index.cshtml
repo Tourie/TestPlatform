@@ -1,0 +1,33 @@
+﻿@model IEnumerable<TestResult>
+@{
+    ViewData["Title"] = "Мои результаты";
+}
+
+<h1>Статистика пройденных тестов:</h1>
+@if (Model != null)
+{
+<table cellspacing="1" cellpadding="4">
+    <tr>
+        <td align="left"><b>Id теста</b></td>
+        <td align="left"><b>Название</b></td>
+        <td align="left"><b>Результат</b></td>
+        <td align="left"><b>Закончил в</b></td>
+        <td align="left"><b>Создатель</b></td>
+    </tr>
+    @foreach (var result in Model)
+    {
+        <tr>
+            <td align="left">@result.TestId</td>
+            <td align="left">@result.Test.Name</td>
+            <td align="left">@result.RightAnswers / @result.Answers</td>
+            <td align="left">@result.finished</td>
+            <td align="left">@result.User.UserName</td>
+        </tr>
+    }
+</table>
+}
+else
+{
+    <p>Не пройдено пока ни одного теста!</p>
+}
+

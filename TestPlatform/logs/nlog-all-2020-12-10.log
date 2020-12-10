@@ -228,3 +228,120 @@ Error Number:207,State:1,Class:16
 2020-12-10 14:48:19.5810|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2020-12-10 14:48:19.5904|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
 2020-12-10 14:48:19.5904|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-10 15:06:11.1406|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-10 15:06:11.1784|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-10 15:06:11.1784|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-10 15:06:11.1861|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-10 15:06:11.1861|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-10 15:15:20.5549|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-10 15:15:20.6027|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-10 15:15:20.6085|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-10 15:15:20.6085|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-10 15:15:20.6206|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-10 15:18:17.5331|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-10 15:18:17.5885|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-10 15:18:17.5939|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-10 15:18:17.5939|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-10 15:18:17.5939|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-10 15:30:33.2869|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-10 15:30:33.3244|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-10 15:30:33.3244|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-10 15:30:33.3244|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-10 15:30:33.3244|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-10 15:31:05.3655|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (11ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[Id] = @__p_0)
+2020-12-10 15:31:05.5330|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'TestPlatform.Infrastructure.Data.ApplicationContext'.
+System.InvalidOperationException: There is already an open DataReader associated with this Connection which must be closed first.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2020-12-10 15:31:05.8538|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-12-10 15:31:21.3980|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[Id] = @__p_0)
+2020-12-10 15:31:21.4300|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'TestPlatform.Infrastructure.Data.ApplicationContext'.
+System.InvalidOperationException: There is already an open DataReader associated with this Connection which must be closed first.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2020-12-10 15:31:21.6307|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-12-10 15:31:48.2845|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-10 15:31:48.3536|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-10 15:31:48.3711|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-10 15:31:48.4029|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-10 15:31:48.4029|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-10 15:34:05.7719|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (12ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'User') AND ([a].[Id] = @__p_0)
+2020-12-10 15:34:05.9050|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'TestPlatform.Infrastructure.Data.ApplicationContext'.
+System.InvalidOperationException: There is already an open DataReader associated with this Connection which must be closed first.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2020-12-10 15:34:06.3081|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-12-10 15:36:42.6325|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-10 15:36:42.6919|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-10 15:36:42.6995|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-10 15:36:42.6995|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-10 15:36:42.6995|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-10 15:37:26.9354|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-10 15:40:38.2333|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-10 15:40:38.2764|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-10 15:40:38.2821|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-10 15:40:38.2821|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-10 15:40:38.2821|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-10 15:41:21.3906|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-10 15:41:21.4591|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-10 15:41:21.4660|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-10 15:41:21.4660|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-10 15:41:21.4660|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-10 15:41:48.9021|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-10 15:44:16.8240|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-10 15:44:16.9332|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-10 15:44:16.9332|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-10 15:44:16.9332|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-10 15:44:16.9513|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-10 15:44:37.6904|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-10 15:52:47.6145|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-10 15:52:47.6604|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-10 15:52:47.6604|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-10 15:52:47.6691|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-10 15:52:47.6691|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-10 15:54:15.8231|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2020-12-10 15:54:58.8616|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-12-10 15:54:58.9580|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-12-10 15:54:59.0384|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-10 15:54:59.0921|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-10 15:54:59.2483|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BSUIR\5 cем\Иги\TestPlatform\TestPlatform
+2020-12-10 15:55:19.5832|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'

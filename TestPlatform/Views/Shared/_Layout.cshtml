@@ -44,6 +44,9 @@
 
             @if (User.Identity.IsAuthenticated)
             {
+                <ul>
+                    <li><a asp-action="Index" asp-controller="MyResults">Мои результаты</a></li>
+                </ul>
                 <form method="post" asp-controller="Account" asp-action="Logout">
                     <button type="submit" class="button primary">Выйти</button>
                 </form>
