@@ -17,6 +17,7 @@ namespace TestPlatform.Contollers
         }
         public IActionResult Index()
         {
+            /*throw new ArgumentException();*/
             return View(Categories);
         }
     }

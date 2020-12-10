@@ -37,12 +37,16 @@ namespace TestPlatform.Services.ModelServices
                                             .Include(test => test.Questions)
                                             .FirstOrDefault(test => test.Id == id);
             var questions = new List<Question>();
-            foreach(var q in test.Questions)
+            if (test != null)
             {
-                var quest = _repository.GetContext().Questions.Include(p => p.Answers).First(question=>question.Id==q.Id);
-                questions.Add(quest);
+                foreach (var q in test.Questions)
+                {
+                    var quest = _repository.GetContext().Questions.Include(p => p.Answers).First(question => question.Id == q.Id);
+                    questions.Add(quest);
+                }
+                test.Questions = questions;
             }
-            test.Questions = questions;
+            
             return test;
         }
         public void Save()
@@ -57,7 +61,7 @@ namespace TestPlatform.Services.ModelServices
 
         public IEnumerable<Test> GetTestsByCategory(Category category)
         {
-            return _repository.GetContext().Categories.Include(categ => categ.Tests).FirstOrDefault(c=>c.Id == category.Id).Tests;
+            return _repository.GetContext().Categories.Include(categ => categ.Tests).SingleOrDefault(c=>c.Id == category.Id).Tests;
         }
         
         public void AddQuestion(Question question,int id)

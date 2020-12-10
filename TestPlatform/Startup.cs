@@ -32,8 +32,6 @@ namespace TestPlatform
             services.AddMvc();
             services.AddControllersWithViews();
 
-            
-
             //connect to db
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ApplicationContext>(options =>
@@ -42,6 +40,15 @@ namespace TestPlatform
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddAuthentication().AddGoogle(options =>
+            {
+                IConfigurationSection googleAuthNSection =
+                Configuration.GetSection("Authentication:Google");
+
+                options.ClientId = "147370545374-lprqjjo2r0u2d7eaqfncdssg5aai7dba.apps.googleusercontent.com";
+                options.ClientSecret = "ljDqHr5Y_O-1s0PYRGrP86G-";
+            });
 
             services.AddSingleton<EmailService>();
             services.AddScoped(typeof(IRepository<>), typeof(GenRepository<>));
@@ -54,10 +61,24 @@ namespace TestPlatform
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
+        {/*
             app.UseDeveloperExceptionPage();
-            app.UseStatusCodePages();
+            app.UseStatusCodePages();*/
+            if (env.IsDevelopment())
+            {
+/*                app.UseDeveloperExceptionPage();
+*/                app.UseExceptionHandler("/Exception");
+                app.UseHsts();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Exception");
+                app.UseHsts();
+            }
+            app.UseStatusCodePagesWithReExecute("/Error/{0}");
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
+
             app.UseRouting();
 
             app.UseAuthentication();
