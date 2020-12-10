@@ -28,12 +28,18 @@ namespace TestPlatform.Contollers
             var categories = CategoryService.GetAll();
             return View(categories);
         }
-        public IActionResult Detail(int id)
+        public IActionResult Detail(int? id)
         {
-            var category = CategoryService.GetCategory(id);
-            var tests = TestService.GetTestsByCategory(category);
-            var viewModel = new CategoryTestsViewModel() { Category = category, Tests = tests };
-            return View(viewModel);
+            var category = id.HasValue ? CategoryService.GetCategory(id.Value):null;
+
+            if(category != null)
+            {
+                var tests = TestService.GetTestsByCategory(category);
+                var viewModel = new CategoryTestsViewModel() { Category = category, Tests = tests };
+                return View(viewModel);
+            }
+
+            return NotFound();
         }
     }
 }
