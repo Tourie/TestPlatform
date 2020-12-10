@@ -13,7 +13,7 @@ namespace TestPlatform.Infrastructure.Data
         public DbSet<Test> Tests { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Answer> Answers { get; set; }
-        /*public DbSet<Profile> Profiles { get; set; }*/
+        public DbSet<TestResult> testResults { get; set; }
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {
@@ -41,9 +41,9 @@ namespace TestPlatform.Infrastructure.Data
             modelBuilder.Entity<Test>().HasData(
                 new Test[]
                 {
-                    new Test{Id=1, Name="Вопросы начального уровня", Description="Описание", Time=12/*, Categories = Categories*/ },
-                    new Test{Id=2, Name="Вопросы среднего уровня", Description="Описание 2 теста", Time = 16/*, Categories = Categories*/ },
-                    new Test{Id=3, Name="Вопросы повышенного уровня", Description="Описание 3 теста", Time=20/*, Categories = Categories*/ }
+                    new Test{Id=1, Name="Вопросы начального уровня", Description="Описание", Time=12, OwnerId="DD20FD22-4350-4D1C-98C4-E82F21C1F414"/*, Categories = Categories*/ },
+                    new Test{Id=2, Name="Вопросы среднего уровня", Description="Описание 2 теста", Time = 16, OwnerId="DD20FD22-4350-4D1C-98C4-E82F21C1F414"/*, Categories = Categories*/ },
+                    new Test{Id=3, Name="Вопросы повышенного уровня", Description="Описание 3 теста", Time=20, OwnerId="DD20FD22-4350-4D1C-98C4-E82F21C1F414"/*, Categories = Categories*/ }
                 });
             modelBuilder.Entity<Question>().HasData(
                 new Question[]

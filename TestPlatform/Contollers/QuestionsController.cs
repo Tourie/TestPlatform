@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ using TestPlatform.WEB.ViewModels;
 
 namespace TestPlatform.WEB.Contollers
 {
+    [Authorize]
     public class QuestionsController : Controller
     {
         private ITestService _TestService { get; set; }
@@ -44,6 +46,11 @@ namespace TestPlatform.WEB.Contollers
             if (ModelState.IsValid && test != null)
             {
                 var question = new Question() { Name = viewModel.Name, Answers = viewModel.Answers, Test = test };
+                foreach (var q in question.Answers)
+                {
+                    if (q.Name == viewModel.NameRightAnswer) q.isTruth = true;
+                    else q.isTruth = false;
+                }
                 _QuestionService.CreateQuestion(question);
                 return RedirectToAction("Update", "Tests", new { id = testId });
             }

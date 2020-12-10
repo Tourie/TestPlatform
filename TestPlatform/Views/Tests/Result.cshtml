@@ -1,0 +1,9 @@
+﻿@model TestResultViewModel
+@{
+    ViewData["Title"] = "Результаты";
+}
+
+<h1>Результат по тесту #@Model.Test.Id</h1>
+<p><b>Название: </b> @Model.Test.Name</p>
+<p><b>Результат: </b> @Model.RightAnswers / @Model.Answers</p>
+<p><b>Окончен: </b> @Model.finished</p>

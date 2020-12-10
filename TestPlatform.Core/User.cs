@@ -7,6 +7,6 @@ namespace TestPlatform.Core
 {
     public class User: IdentityUser
     {
-        /*public Profile Profile { get; set; }*/ 
+        public IEnumerable<Test> PassedTests { get; set; }
     }
 }

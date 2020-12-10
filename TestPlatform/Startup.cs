@@ -32,7 +32,7 @@ namespace TestPlatform
             services.AddMvc();
             services.AddControllersWithViews();
 
-            services.AddSingleton<EmailService>();
+            
 
             //connect to db
             string connection = Configuration.GetConnectionString("DefaultConnection");
@@ -43,10 +43,12 @@ namespace TestPlatform
                 .AddEntityFrameworkStores<ApplicationContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddSingleton<EmailService>();
             services.AddScoped(typeof(IRepository<>), typeof(GenRepository<>));
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<ITestService, TestService>();
             services.AddTransient<IQuestionService, QuestionService>();
+            services.AddTransient<ITestResultService, TestResultService>();
         }
         
 

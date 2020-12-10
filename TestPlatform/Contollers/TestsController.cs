@@ -8,6 +8,7 @@ using TestPlatform.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using TestPlatform.WEB.ViewModels;
 using TestPlatform.BL;
+using Microsoft.AspNetCore.Identity;
 
 namespace TestPlatform.Contollers
 {
@@ -16,10 +17,14 @@ namespace TestPlatform.Contollers
     {
         private ITestService _TestService { get; set; }
         private ICategoryService _CategoryService { get; set; }
-        public TestsController(ITestService testService, ICategoryService categoryService)
+        private ITestResultService _TestResultService { get; set; }
+        private UserManager<User> _userManager { get; set; }
+        public TestsController(ITestService testService, ICategoryService categoryService, UserManager<User> userManager, ITestResultService testResultService)
         {
             _TestService = testService;
             _CategoryService = categoryService;
+            _TestResultService = testResultService;
+            _userManager = userManager;
         }
 
         public IActionResult Index()
@@ -45,7 +50,7 @@ namespace TestPlatform.Contollers
                 {
                     testCategories.Add(AllCategories.First(item => item.Id == category));
                 }
-                Test test = new Test() { Name = viewModel.Name, Description = viewModel.Description, Time = viewModel.Time, Categories = testCategories };
+                Test test = new Test() { Name = viewModel.Name, Description = viewModel.Description, Time = viewModel.Time, Categories = testCategories, OwnerId=_userManager.GetUserId(User) };
                 _TestService.CreateTest(test);
                 return RedirectToAction("Index", "Tests");
             }
@@ -82,9 +87,17 @@ namespace TestPlatform.Contollers
             var test = _TestService.GetTest(id.Value);
             if (test != null)
             {
-                var questions = test.Questions;
-                var viewModel = new TestViewModel() { Id=test.Id, Name=test.Name, Description=test.Description, Categories=test.Categories,
-                                                        Questions=questions, Time=test.Time};
+                var questions = test.Questions.ToList();
+                var unsorted_questions = UnsortQuestions.UnsortQuestionsMethod(questions);
+                var viewModel = new TestViewModel()
+                {
+                    Id = test.Id,
+                    Name = test.Name,
+                    Description = test.Description,
+                    Categories = test.Categories,
+                    Questions = unsorted_questions,
+                    Time = test.Time
+                };
                 return View(viewModel);
             }
             return NotFound();
@@ -130,19 +143,43 @@ namespace TestPlatform.Contollers
         }
 
         [HttpPost]
-        public IActionResult Check(TestViewModel viewModel, int? id)
+        public async Task<IActionResult> Result(TestViewModel viewModel, int? id)
         {
             if (id.HasValue)
             {
+                DateTime finished = DateTime.Now;
                 var usersAnswers = viewModel.UsersAnswers;
                 var test = _TestService.GetTest(id.Value);
-                int result = ValidateTestsResults.Check(usersAnswers, test);
-                return Content(result.ToString());
+                // check answers
+                int rightAnswers = ValidateTestsResults.Check(usersAnswers, test);
+                // get user
+                var user = await _userManager.GetUserAsync(HttpContext.User);
+                // create testResult in database
+                var testResult = new TestResult() 
+                { 
+                    RightAnswers = rightAnswers, finished = finished, 
+                    Test = test, TestId = test.Id, 
+                    Answers = test.Questions.Count(),
+                    User = user, 
+                    UserId = user.Id
+                };
+                _TestResultService.Create(testResult);
+                // create viewModel
+                var resultViewModel = new TestResultViewModel() 
+                { 
+                    RightAnswers = rightAnswers, 
+                    finished = finished, 
+                    Test = test, 
+                    User = user, 
+                    Answers = test.Questions.Count() 
+                };
+                return View(resultViewModel);
             }
             else
             {
                 return NotFound();
             }
-        } 
+        }
+        
     }
 }

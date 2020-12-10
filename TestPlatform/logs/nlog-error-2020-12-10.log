@@ -34,3 +34,9 @@ Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'AnswerI
 ClientConnectionId:4b62df54-8ea2-40c3-a11b-93d9a320a6ab
 Error Number:207,State:1,Class:16
 2020-12-10 00:50:12.1426|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-12-10 12:54:25.8510|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Error' was not found. Searched locations: /Views/Account/Error.cshtml, /Views/Shared/Error.cshtml, /Pages/Shared/Error.cshtml
+2020-12-10 12:54:25.9727|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-12-10 12:54:34.8263|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Error' was not found. Searched locations: /Views/Account/Error.cshtml, /Views/Shared/Error.cshtml, /Pages/Shared/Error.cshtml
+2020-12-10 12:54:34.8713|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-12-10 12:54:49.7768|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Error' was not found. Searched locations: /Views/Account/Error.cshtml, /Views/Shared/Error.cshtml, /Pages/Shared/Error.cshtml
+2020-12-10 12:54:49.7955|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.

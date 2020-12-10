@@ -16,7 +16,7 @@
                 @foreach (var (answer, index) in Model.Answers.Select((answer, index) => (answer, index)))
                 {
                     <tr class="input_tr">
-                        <td><input type="text" name="Answers[@index].Name" value="@answer.Name" class="input_member"/></td>
+                        <td><input type="text" name="Answers[@index].Name" value="@answer.Name" class="input_member" /></td>
                         <td><a onclick="deleteAnswer(@index)">Удалить</a></td>
                     </tr>
                 }
@@ -24,6 +24,17 @@
         </table>
     </div>
     <a class="btn btn-success" onclick="addInput()">Добавить ответ</a>
+    <select class="form-control" asp-for="@Model.NameRightAnswer">
+        <option disabled>Выберите правильный ответ:</option>
+        @if (Model.RightAnswer != null)
+        {
+            <option selected value="@Model.RightAnswer.Name">@Model.RightAnswer.Name</option>
+        }
+        @foreach (var (answer, index) in Model.Answers.Select((answer, index) => (answer, index)))
+        {
+            <option value="@answer.Name">@answer.Name</option>
+        }
+    </select>
     <button class="button primary" type="submit" asp-route-testId="@Model.TestId">Добавить</button>
 </form>
 <a class="button" asp-action="Update" asp-controller="Tests" asp-route-id="@Model.TestId">Назад</a>

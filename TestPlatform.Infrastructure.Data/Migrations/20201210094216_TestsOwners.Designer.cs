@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestPlatform.Infrastructure.Data;
 
 namespace TestPlatform.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20201210094216_TestsOwners")]
+    partial class TestsOwners
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -487,7 +489,10 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                     b.Property<int>("TestId")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserId")
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId1")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("finished")
@@ -497,7 +502,7 @@ namespace TestPlatform.Infrastructure.Data.Migrations
 
                     b.HasIndex("TestId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId1");
 
                     b.ToTable("testResults");
                 });
@@ -528,13 +533,13 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         {
                             Id = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "78379fca-3870-46f3-8b54-9fcabae8fea7",
+                            ConcurrencyStamp = "d2cf9020-174d-4949-84d0-69bb1d6947f9",
                             Email = "email@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "EMAIL@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAECxrH31K3xOVVNX7e2kX0zCv/4/vgvkanKiBiXRTLLg8trfghAeu5Yq76+MhtTWpfA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOFC7pH7SmvDXU5u56V+lezDQwft8RhAHuoMfUC9fJO5lw7KXBSM+QNh8qO0C0fzFQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -640,7 +645,7 @@ namespace TestPlatform.Infrastructure.Data.Migrations
 
                     b.HasOne("TestPlatform.Core.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("Test");
 

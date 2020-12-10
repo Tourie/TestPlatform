@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestPlatform.Infrastructure.Data;
 
 namespace TestPlatform.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20201210080747_AddedTestResults")]
+    partial class AddedTestResults
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -434,13 +436,15 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("OwnerId")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<long>("Time")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Tests");
 
@@ -450,7 +454,6 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                             Id = 1,
                             Description = "Описание",
                             Name = "Вопросы начального уровня",
-                            OwnerId = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
                             Time = 12L
                         },
                         new
@@ -458,7 +461,6 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                             Id = 2,
                             Description = "Описание 2 теста",
                             Name = "Вопросы среднего уровня",
-                            OwnerId = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
                             Time = 16L
                         },
                         new
@@ -466,7 +468,6 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                             Id = 3,
                             Description = "Описание 3 теста",
                             Name = "Вопросы повышенного уровня",
-                            OwnerId = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
                             Time = 20L
                         });
                 });
@@ -487,7 +488,10 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                     b.Property<int>("TestId")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserId")
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId1")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("finished")
@@ -497,24 +501,9 @@ namespace TestPlatform.Infrastructure.Data.Migrations
 
                     b.HasIndex("TestId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId1");
 
                     b.ToTable("testResults");
-                });
-
-            modelBuilder.Entity("TestUser", b =>
-                {
-                    b.Property<string>("ParticipantsId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("PassedTestsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ParticipantsId", "PassedTestsId");
-
-                    b.HasIndex("PassedTestsId");
-
-                    b.ToTable("TestUser");
                 });
 
             modelBuilder.Entity("TestPlatform.Core.User", b =>
@@ -528,13 +517,13 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         {
                             Id = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "78379fca-3870-46f3-8b54-9fcabae8fea7",
+                            ConcurrencyStamp = "54a391f4-3ece-4276-850d-7c84b1e06eb7",
                             Email = "email@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "EMAIL@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAECxrH31K3xOVVNX7e2kX0zCv/4/vgvkanKiBiXRTLLg8trfghAeu5Yq76+MhtTWpfA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEfhiqjeKqP8zBD8GsIVvHeeTlblxIo5PbNMfFhaQ+tBAZI8+yAALnc/UNkoS6diUA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -630,6 +619,13 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                     b.Navigation("Test");
                 });
 
+            modelBuilder.Entity("TestPlatform.Core.Test", b =>
+                {
+                    b.HasOne("TestPlatform.Core.User", null)
+                        .WithMany("PassedTests")
+                        .HasForeignKey("UserId");
+                });
+
             modelBuilder.Entity("TestPlatform.Core.TestResult", b =>
                 {
                     b.HasOne("TestPlatform.Core.Test", "Test")
@@ -640,26 +636,11 @@ namespace TestPlatform.Infrastructure.Data.Migrations
 
                     b.HasOne("TestPlatform.Core.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("Test");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("TestUser", b =>
-                {
-                    b.HasOne("TestPlatform.Core.User", null)
-                        .WithMany()
-                        .HasForeignKey("ParticipantsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TestPlatform.Core.Test", null)
-                        .WithMany()
-                        .HasForeignKey("PassedTestsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("TestPlatform.Core.Question", b =>
@@ -670,6 +651,11 @@ namespace TestPlatform.Infrastructure.Data.Migrations
             modelBuilder.Entity("TestPlatform.Core.Test", b =>
                 {
                     b.Navigation("Questions");
+                });
+
+            modelBuilder.Entity("TestPlatform.Core.User", b =>
+                {
+                    b.Navigation("PassedTests");
                 });
 #pragma warning restore 612, 618
         }
