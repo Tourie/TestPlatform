@@ -17,7 +17,10 @@ namespace TestPlatform.BL
                 if (usersResults.ContainsKey(question.Id))
                 {
                     var rightAnswer = question.Answers.FirstOrDefault(answer => answer.isTruth);
-                    result += rightAnswer.Id == usersResults[question.Id] ? 1 : 0;
+                    if(rightAnswer != null)
+                    {
+                        result += rightAnswer.Id == usersResults[question.Id] ? 1 : 0;
+                    }
                 }
             }
             return result;

@@ -17,7 +17,8 @@ namespace TestPlatform.Core
 
         public IEnumerable<Question> Questions { get; set; }
 
-        public IEnumerable<User> Participants { get; set; }
+        
         public string OwnerId { get; set; }
+        public User Owner { get; set; }
     }
 }

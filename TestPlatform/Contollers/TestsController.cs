@@ -40,7 +40,7 @@ namespace TestPlatform.Contollers
         }
 
         [HttpPost]
-        public IActionResult Create(TestViewModel viewModel)
+        public async Task<IActionResult> Create(TestViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
@@ -50,7 +50,15 @@ namespace TestPlatform.Contollers
                 {
                     testCategories.Add(AllCategories.First(item => item.Id == category));
                 }
-                Test test = new Test() { Name = viewModel.Name, Description = viewModel.Description, Time = viewModel.Time, Categories = testCategories, OwnerId=_userManager.GetUserId(User) };
+                Test test = new Test() 
+                { 
+                    Name = viewModel.Name, 
+                    Description = viewModel.Description, 
+                    Time = viewModel.Time, 
+                    Categories = testCategories, 
+                    OwnerId=_userManager.GetUserId(User), 
+                    Owner = await _userManager.GetUserAsync(User) 
+                };
                 _TestService.CreateTest(test);
                 return RedirectToAction("Index", "Tests");
             }
