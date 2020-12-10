@@ -18,12 +18,14 @@ namespace TestPlatform.Contollers
         private ITestService _TestService { get; set; }
         private ICategoryService _CategoryService { get; set; }
         private ITestResultService _TestResultService { get; set; }
+        private ICommentService _CommentService { get; set; }
         private UserManager<User> _userManager { get; set; }
-        public TestsController(ITestService testService, ICategoryService categoryService, UserManager<User> userManager, ITestResultService testResultService)
+        public TestsController(ITestService testService, ICategoryService categoryService, UserManager<User> userManager, ITestResultService testResultService, ICommentService commentService)
         {
             _TestService = testService;
             _CategoryService = categoryService;
             _TestResultService = testResultService;
+            _CommentService = commentService;
             _userManager = userManager;
         }
 
@@ -70,17 +72,33 @@ namespace TestPlatform.Contollers
             
         }
         [HttpGet]
-        public IActionResult Detail(int? id)
+        public async Task<IActionResult> Detail(int? id)
         {
             if(!id.HasValue)
             {
                 return NotFound();
             }
             var test = _TestService.GetTest(id.Value);
+
             if(test !=null)
             {
+                var comments = _CommentService.GetCommentsByTest(test).ToList();
+
+                foreach (var item in comments)
+                {
+                    /*if (item.UserId == null)
+                    {
+                        comments.Remove(item);
+                    }*/
+
+                    item.User = _userManager.FindByIdAsync(item.UserId).Result;
+                }
+
+                ViewBag.Comments = _CommentService.GetCommentsByTest(test);
+
                 return View(test);
             }
+
             return NotFound();
         }
 

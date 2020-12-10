@@ -1,6 +1,8 @@
 ﻿@model Test
+@inject SignInManager<User> signInManager
+@inject UserManager<User> userManager
 
-@{ 
+@{
     ViewData["Title"] = Model.Name;
 }
 
@@ -11,16 +13,18 @@
 </div>
 
 <div>
-    <p><b>Категории:</b>
-        @foreach (var category in Model.Categories) { 
+    <p>
+        <b>Категории:</b>
+        @foreach (var category in Model.Categories)
+        {
             <a asp-controller="Categories" asp-action="Detail" asp-route-id="@category.Id" style="margin-right:5px">
                 @category.Name
-            </a> 
-         }
+            </a>
+        }
     </p>
 </div>
 <div>
-   <b>Время на прохождение:</b> @Model.Time мин.
+    <b>Время на прохождение:</b> @Model.Time мин.
 </div>
 <div>
     <a class="button" asp-action="Update" asp-controller="Tests" asp-route-id="@Model.Id">Редатировать тест</a>
@@ -28,3 +32,39 @@
 <form method="post" class="mt-4" asp-action="Solve" asp-controller="Tests" asp-route-id="@Model.Id">
     <input type="submit" value="Начать тест!" />
 </form>
+
+<h2>Обсуждение теста:</h2>
+
+@if (signInManager.IsSignedIn(User))
+{
+    <form>
+        <input type="hidden" asp-for="@Model.Id" class="form-control" id="articleId" />
+        <div class="form-group">
+            <textarea class="form-control"  rows="12" id="content"></textarea>
+        </div>
+        <br />
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Отправить" id="send" />
+        </div>
+    </form>
+}
+
+
+<br />
+<div id="comments">
+    @if (ViewBag.Comments != null)
+    {
+        @foreach (Comment comment in ViewBag.Comments)
+        {
+            <div class="box">
+                <a href=""><h4>@comment.User.UserName</h4></a>
+                <p>@comment.Content</p>
+                <p class="data-output">@comment.PostedDate</p>
+            </div>
+        }
+    }
+</div>
+<script src="~/js/signalr/dist/browser/signalr.min.js"></script>
+<script src="~/js/sendComments.js"></script>
+
+

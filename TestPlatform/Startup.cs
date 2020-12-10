@@ -16,6 +16,7 @@ using TestPlatform.Services.Interfaces;
 using TestPlatform.Services.ModelServices;
 using Microsoft.AspNetCore.Identity;
 using TestPlatform.Core;
+using TestPlatform.WEB.Hubs;
 
 namespace TestPlatform
 {
@@ -41,6 +42,12 @@ namespace TestPlatform
                 .AddEntityFrameworkStores<ApplicationContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddSignalR(hubOptions =>
+            {
+                hubOptions.EnableDetailedErrors = true;
+                //hubOptions.KeepAliveInterval = TimeSpan.FromMinutes(1);
+            });
+
             services.AddAuthentication().AddGoogle(options =>
             {
                 IConfigurationSection googleAuthNSection =
@@ -56,6 +63,7 @@ namespace TestPlatform
             services.AddTransient<ITestService, TestService>();
             services.AddTransient<IQuestionService, QuestionService>();
             services.AddTransient<ITestResultService, TestResultService>();
+            services.AddTransient<ICommentService, CommentService>();
         }
         
 
@@ -66,9 +74,9 @@ namespace TestPlatform
             app.UseStatusCodePages();*/
             if (env.IsDevelopment())
             {
-/*                app.UseDeveloperExceptionPage();
-*/                app.UseExceptionHandler("/Exception");
-                app.UseHsts();
+                app.UseDeveloperExceptionPage();
+                /*app.UseExceptionHandler("/Exception");
+                app.UseHsts();*/
             }
             else
             {
@@ -95,6 +103,7 @@ namespace TestPlatform
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
 
+                endpoints.MapHub<CommentsHub>("/comments");
             });
         }
     }

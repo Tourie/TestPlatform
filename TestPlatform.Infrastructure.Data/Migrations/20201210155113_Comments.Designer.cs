@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestPlatform.Infrastructure.Data;
 
 namespace TestPlatform.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20201210155113_Comments")]
+    partial class Comments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -382,19 +384,19 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                     b.Property<DateTime>("PostedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TestId")
-                        .HasColumnType("int");
-
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("Id");
+                    b.Property<int>("TestId")
+                        .HasColumnType("int");
 
-                    b.HasIndex("TestId");
+                    b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comments");
+                    b.HasIndex("TestId");
+
+                    b.ToTable("Comment");
                 });
 
             modelBuilder.Entity("TestPlatform.Core.Question", b =>
@@ -543,13 +545,13 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         {
                             Id = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "69481e0a-ff82-468a-b679-d8540b66e819",
+                            ConcurrencyStamp = "1bdc3ca0-b0e7-4d5f-8272-664664c40145",
                             Email = "email@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "EMAIL@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHEGz+y8I5P245z9uQjynMIwE2DSH96S+bhwAM0FhkB1eS+s/hnUBhOf4tx1UF5rLQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFcxG7fOSqKYdOq6pQPubkQLfJvtIpp/YnHEuMrCK66OqMDizb3s+WiNm1oTJNNo0w==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -636,15 +638,15 @@ namespace TestPlatform.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("TestPlatform.Core.Comment", b =>
                 {
+                    b.HasOne("TestPlatform.Core.User", "User")
+                        .WithMany("Comments")
+                        .HasForeignKey("UserId");
+
                     b.HasOne("TestPlatform.Core.Test", "Test")
                         .WithMany("Comments")
                         .HasForeignKey("TestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("TestPlatform.Core.User", "User")
-                        .WithMany("Comments")
-                        .HasForeignKey("UserId");
 
                     b.Navigation("Test");
 

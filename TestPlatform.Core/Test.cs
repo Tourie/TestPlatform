@@ -20,5 +20,8 @@ namespace TestPlatform.Core
         
         public string OwnerId { get; set; }
         public User Owner { get; set; }
+
+        public List<Comment> Comments { get; set; }
+
     }
 }

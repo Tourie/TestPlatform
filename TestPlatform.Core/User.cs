@@ -8,5 +8,6 @@ namespace TestPlatform.Core
     public class User: IdentityUser
     {
         public IEnumerable<Test> CreatedTests { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }
