@@ -2,13 +2,19 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <UserSecretsId>0ead2bb6-4beb-4e33-89b9-6e811132d026</UserSecretsId>
     </PropertyGroup>
+
+    <ItemGroup>
+      <Content Remove="appsettings.Production.json" />
+    </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.10" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.0" />
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
       <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Azure.SignalR" Version="1.4.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -29,6 +35,10 @@
       <Folder Include="Areas\Admin\Views\" />
       <Folder Include="wwwroot\img\" />
       <Folder Include="Areas\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="appsettings.Production.json" />
     </ItemGroup>
 
     <ItemGroup>

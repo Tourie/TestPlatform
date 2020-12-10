@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "signalr1": {
+      "restored": true,
+      "restoreTime": "2020-12-10T18:22:07.7084697Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-12-10T18:19:50.1861745Z"
+    }
+  },
+  "parameters": {
+    "signalr1.resourceGroupName": {
+      "Name": "signalr1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "TestPlatformWEB20201210211037ResourceGroup"
+    },
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "d2c561e6-137c-46e0-b3b8-267cdb524445"
+    },
+    "signalr1.subscriptionId": {
+      "Name": "signalr1.subscriptionId",
+      "Type": "subscription",
+      "Value": "d2c561e6-137c-46e0-b3b8-267cdb524445"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "TestPlatformWEB20201210211037ResourceGroup"
+    }
+  }
+}

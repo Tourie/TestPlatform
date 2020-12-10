@@ -20,6 +20,7 @@
     <Area_SelectedScaffolderCategoryPath>root/Identity</Area_SelectedScaffolderCategoryPath>
     <ActiveDebugProfile>TestPlatform</ActiveDebugProfile>
     <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_Layout.cshtml</WebStackScaffolding_LayoutPageFile>
+    <NameOfLastUsedPublishProfile>TestPlatformWEB20201210211037 - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

@@ -72,12 +72,13 @@ namespace TestPlatform
         {/*
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();*/
+            /*app.UseDeveloperExceptionPage();*/
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                /*app.UseExceptionHandler("/Exception");
-                app.UseHsts();*/
-            }
+                app.UseExceptionHandler("/Exception");
+/*                app.UseHsts();
+*/            }
             else
             {
                 app.UseExceptionHandler("/Exception");

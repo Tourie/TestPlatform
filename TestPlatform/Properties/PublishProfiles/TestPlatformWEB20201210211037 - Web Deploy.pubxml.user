@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjiOcOr7RUkOZY8aV38q1ZAAAAAACAAAAAAAQZgAAAAEAACAAAABdrAW7pG0fmYlQhmC6sQ6YztZ2uBjhnFbTSsKoPxKCngAAAAAOgAAAAAIAACAAAABlpM98HTAAg5lbN2GsaenV+OTcVaKPCn57FQmIIvrWRYAAAAB6CXJ3iYW1ZbjtfMCM1zIqafSeyMIFRKDOruDS/jKbssNPhW1b/XkWi+YdWdIpk5USjz/guXwjpFtkkViYG5GWo+FWWsjbaF/wm+QKgyIokUzGPNWZgVWKrn4LAlE2qskgCFo/KA40qTBo5kawQdE2XmppNRkoeWjA4GOSvkxmV0AAAAAnBVg6ba27dYdk4qlXpOWDgpm3TVrmEKY/BeWlwar3TQ4cNMobS/Xwg2BoLG1ZdIZ1kfp1YM1aQ2Q/37hpYtwP</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:testplatformserver15.database.windows.net,1433%3bInitial Catalog=TestPlatform.WEB_db%3bUser Id=tsa%40testplatformserver15%3bPassword=Qwerty15%2a</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="TestPlatform.Infrastructure.Data.ApplicationContext">
+      <Value>Data Source=tcp:testplatformserver15.database.windows.net,1433%3bInitial Catalog=TestPlatform.WEB_db%3bUser Id=tsa%40testplatformserver15%3bPassword=Qwerty15%2a</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
