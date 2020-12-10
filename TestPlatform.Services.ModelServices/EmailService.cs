@@ -7,11 +7,11 @@ namespace TestPlatform.Services.ModelServices
 {
     public class EmailService
     {
-        private readonly IConfiguration _config;
+/*        private readonly IConfiguration _config;
         public EmailService(IConfiguration configuration)
         {
             _config = configuration;
-        }
+        }*/
         public async Task SendEmailAsync(string email, string subject, string message)
         {
             var emailMessage = new MimeMessage();
@@ -27,7 +27,7 @@ namespace TestPlatform.Services.ModelServices
             using (var client = new SmtpClient())
             {
                 await client.ConnectAsync("smtp.gmail.com", 25, false);
-                await client.AuthenticateAsync(_config["Email"], _config["Password"]);
+                await client.AuthenticateAsync("test.platform.proj@gmail.com", "Qwerty15*");
                 await client.SendAsync(emailMessage);
                 await client.DisconnectAsync(true);
             }

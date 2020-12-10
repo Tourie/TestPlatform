@@ -28,7 +28,7 @@ namespace TestPlatform.WEB.Contollers
             var results = _testResultService.GetUserResults(userId).ToList();
             foreach(var result in results)
             {
-                result.User = await _userManager.FindByIdAsync(userId);
+                result.User = await _userManager.FindByIdAsync(result.Test.OwnerId);
                 result.Test = _testService.GetTest(result.TestId);
             }
             results.Sort((result1, result2) =>

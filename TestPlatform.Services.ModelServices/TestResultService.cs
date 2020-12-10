@@ -28,7 +28,7 @@ namespace TestPlatform.Services.ModelServices
 
         public IEnumerable<TestResult> GetUserResults(string user_id)
         {
-            return _repository.GetContext().testResults.Where(result => result.UserId == user_id).ToList();
+            return _repository.GetContext().testResults.Where(result => result.UserId == user_id).Include(result=>result.Test);
         }
     }
 }

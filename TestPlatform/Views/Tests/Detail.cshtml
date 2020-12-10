@@ -27,7 +27,7 @@
     <b>Время на прохождение:</b> @Model.Time мин.
 </div>
 <div>
-    <a class="button" asp-action="Update" asp-controller="Tests" asp-route-id="@Model.Id">Редатировать тест</a>
+    <a class="button" asp-action="Update" asp-controller="Tests" asp-route-id="@Model.Id">Редактировать тест</a>
 </div>
 <form method="post" class="mt-4" asp-action="Solve" asp-controller="Tests" asp-route-id="@Model.Id">
     <input type="submit" value="Начать тест!" />

@@ -57,6 +57,7 @@ namespace TestPlatform
                 options.ClientSecret = "ljDqHr5Y_O-1s0PYRGrP86G-";
             });
 
+            services.AddTransient(serviceProvider => Configuration);
             services.AddSingleton<EmailService>();
             services.AddScoped(typeof(IRepository<>), typeof(GenRepository<>));
             services.AddTransient<ICategoryService, CategoryService>();
@@ -72,7 +73,7 @@ namespace TestPlatform
         {/*
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();*/
-            /*app.UseDeveloperExceptionPage();*/
+            app.UseDeveloperExceptionPage();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -81,7 +82,7 @@ namespace TestPlatform
 */            }
             else
             {
-                app.UseExceptionHandler("/Exception");
+                /*app.UseExceptionHandler("/Exception");*/
                 app.UseHsts();
             }
             app.UseStatusCodePagesWithReExecute("/Error/{0}");
