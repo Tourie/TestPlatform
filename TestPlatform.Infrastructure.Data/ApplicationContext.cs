@@ -48,13 +48,13 @@ namespace TestPlatform.Infrastructure.Data
             modelBuilder.Entity<Question>().HasData(
                 new Question[]
                 {
-                    new Question{ Id=1, Name="1 вопрос 1 теста", Testid=1, IdRightAnswer=1 },
-                    new Question{ Id=2, Name="2 вопрос 1 теста", Testid=1, IdRightAnswer=3 },
+                    new Question{ Id=1, Name="1 вопрос 1 теста", Testid=1 },
+                    new Question{ Id=2, Name="2 вопрос 1 теста", Testid=1 },
 
-                    new Question{ Id=3, Name="1 вопрос 2 теста", Testid=2, IdRightAnswer=5 },
-                    new Question{ Id=4, Name="2 вопрос 2 теста", Testid=2, IdRightAnswer=7 },
+                    new Question{ Id=3, Name="1 вопрос 2 теста", Testid=2 },
+                    new Question{ Id=4, Name="2 вопрос 2 теста", Testid=2 },
 
-                    new Question{ Id=5, Name="1 вопрос 3 теста", Testid=3, IdRightAnswer=10 },
+                    new Question{ Id=5, Name="1 вопрос 3 теста", Testid=3 },
                 });
 
             modelBuilder.Entity<Answer>().HasData(

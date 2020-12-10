@@ -20,7 +20,6 @@ namespace TestPlatform.WEB.ViewModels
         [Display(Name = "Answers")]
         public IEnumerable<Answer> Answers { get; set; }
 
-        [Required]
         [Display(Name = "NameRightAnswer")]
         public string NameRightAnswer { get; set; }
         public Answer RightAnswer { get; set; }
