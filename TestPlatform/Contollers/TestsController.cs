@@ -72,7 +72,7 @@ namespace TestPlatform.Contollers
             
         }
         [HttpGet]
-        public async Task<IActionResult> Detail(int? id)
+        public IActionResult Detail(int? id)
         {
             if(!id.HasValue)
             {
@@ -130,10 +130,11 @@ namespace TestPlatform.Contollers
         }
 
         [HttpGet]
-        public IActionResult Update(int? id)
+        public async Task<IActionResult> Update(int? id)
         {
+            var user = await _userManager.GetUserAsync(User);
             var test = id.HasValue ? _TestService.GetTest(id.Value) : null;
-            if (test == null)
+            if (test == null || user.Id.ToString() != test.OwnerId)
             {
                 return NotFound();
             }
@@ -142,10 +143,11 @@ namespace TestPlatform.Contollers
         }
 
         [HttpPost]
-        public IActionResult Update(TestViewModel viewModel)
+        public async Task<IActionResult> Update(TestViewModel viewModel)
         {
+            var user = await _userManager.GetUserAsync(User);
             var test = _TestService.GetTest(viewModel.Id);
-            if(test != null)
+            if(test != null && user.Id == test.OwnerId)
             {
                 test.Name = viewModel.Name;
                 test.Time = viewModel.Time;
@@ -157,10 +159,11 @@ namespace TestPlatform.Contollers
         }
 
         [HttpGet]
-        public IActionResult Delete(int? id)
+        public async Task<IActionResult> Delete(int? id)
         {
             var test = id.HasValue ? _TestService.GetTest(id.Value) : null;
-            if (test != null)
+            var user = await _userManager.GetUserAsync(User);
+            if (test != null && user.Id == test.OwnerId)
             {
                 _TestService.DeleteTest(id.Value);
                 return RedirectToAction("Index", "Tests");

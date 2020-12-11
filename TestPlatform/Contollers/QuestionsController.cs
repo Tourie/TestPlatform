@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -13,15 +14,17 @@ namespace TestPlatform.WEB.Contollers
     [Authorize]
     public class QuestionsController : Controller
     {
-        private ITestService _TestService { get; set; }
-        private IQuestionService _QuestionService { get; set; }
-        public QuestionsController(IQuestionService questionService, ITestService testService)
+        private  ITestService _TestService { get; set; }
+        private  IQuestionService _QuestionService { get; set; }
+        private UserManager<User> _UserManager { get; set; }
+        public QuestionsController(IQuestionService questionService, ITestService testService, UserManager<User> userManager)
         {
             _TestService = testService;
             _QuestionService = questionService;
+            _UserManager = userManager;
         }
         [HttpGet]
-        public IActionResult Create(int? testId)
+        public async Task<IActionResult> Create(int? testId)
         {
             if (!testId.HasValue)
             {
@@ -29,8 +32,9 @@ namespace TestPlatform.WEB.Contollers
             }
             else
             {
+                var user = await _UserManager.GetUserAsync(User);
                 var test = _TestService.GetTest(testId.Value);
-                if (test != null)
+                if (test != null && test.OwnerId == user.Id)
                 {
                     var answers = new Answer[] { new Answer() { Name = "Ответ 1" }, new Answer() { Name = "Ответ 2" }, new Answer() { Name = "Ответ 3" } };
                     var viewModel = new QuestionViewModel() { Answers = answers, TestId = testId.Value };
@@ -40,10 +44,11 @@ namespace TestPlatform.WEB.Contollers
             }
         }
         [HttpPost]
-        public IActionResult Create(QuestionViewModel viewModel, int testId)
+        public async Task<IActionResult> Create(QuestionViewModel viewModel, int testId)
         {
             var test = _TestService.GetTest(testId);
-            if (ModelState.IsValid && test != null)
+            var user = await _UserManager.GetUserAsync(User);
+            if (ModelState.IsValid && test != null && test.OwnerId == user.Id)
             {
                 var question = new Question() { Name = viewModel.Name, Answers = viewModel.Answers, Test = test };
                 foreach (var q in question.Answers)
@@ -63,11 +68,12 @@ namespace TestPlatform.WEB.Contollers
         }
 
         [HttpGet]
-        public IActionResult Update(int? id)
+        public async Task<IActionResult> Update(int? id)
         {
           
             var question = id.HasValue ? _QuestionService.GetQuestion(id.Value) : null;
-            if (question != null)
+            var user = await _UserManager.GetUserAsync(User);
+            if (question != null && question.Test.OwnerId == user.Id)
             {
                 var rightAnswer = _QuestionService.GetRightAnswer(question.Id);
                 var viewModel = new QuestionViewModel() { Answers = question.Answers, TestId = question.Testid, 
@@ -79,10 +85,11 @@ namespace TestPlatform.WEB.Contollers
         }
 
         [HttpPost]
-        public IActionResult Update(QuestionViewModel viewModel, int? id)
+        public async Task<IActionResult> Update(QuestionViewModel viewModel, int? id)
         {
             var question = id.HasValue ? _QuestionService.GetQuestion(id.Value) : null;
-            if (ModelState.IsValid && question != null)
+            var user = await _UserManager.GetUserAsync(User);
+            if (ModelState.IsValid && question != null && user.Id == question.Test.OwnerId)
             {
                 question.Name = viewModel.Name;
                 question.Answers = viewModel.Answers;
@@ -98,10 +105,11 @@ namespace TestPlatform.WEB.Contollers
         }
 
         [HttpGet]
-        public IActionResult Delete(int? id)
+        public async Task<IActionResult> Delete(int? id)
         {
             var question = id.HasValue ? _QuestionService.GetQuestion(id.Value) : null;
-            if (question != null)
+            var user = await _UserManager.GetUserAsync(User);
+            if (question != null && question.Test.OwnerId == user.Id)
             {
                 _QuestionService.DeleteQuestion(question.Id);
                 return RedirectToAction("Update", "Tests", new { id = question.Testid });

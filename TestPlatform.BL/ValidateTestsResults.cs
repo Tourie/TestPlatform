@@ -10,6 +10,11 @@ namespace TestPlatform.BL
     {
         public static int Check(Dictionary<int,int> usersResults, Test test)
         {
+            if(usersResults == null)
+            {
+                return 0;
+            }
+
             int result = 0;
             var questions = test.Questions;
             foreach(var question in questions)

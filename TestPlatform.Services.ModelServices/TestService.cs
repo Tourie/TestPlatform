@@ -35,7 +35,7 @@ namespace TestPlatform.Services.ModelServices
         {
             var test = _repository.GetContext().Tests.Include(test => test.Categories)
                                             .Include(test => test.Questions)
-                                            .FirstOrDefault(test => test.Id == id);
+                                            .SingleOrDefault(test => test.Id == id);
             var questions = new List<Question>();
             if (test != null)
             {

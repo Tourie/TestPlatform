@@ -76,8 +76,8 @@ namespace TestPlatform
             app.UseDeveloperExceptionPage();
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
-                app.UseExceptionHandler("/Exception");
+/*                app.UseDeveloperExceptionPage();
+*/                /*app.UseExceptionHandler("/Exception");*/
 /*                app.UseHsts();
 */            }
             else

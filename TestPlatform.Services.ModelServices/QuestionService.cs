@@ -28,7 +28,7 @@ namespace TestPlatform.Services.ModelServices
 
         public Question GetQuestion(int id)
         {
-            return _repository.GetContext().Questions.Include(question => question.Answers).FirstOrDefault(q => q.Id == id);
+            return _repository.GetContext().Questions.Include(q=>q.Test).Include(question => question.Answers).FirstOrDefault(q => q.Id == id);
         }
 
         public void UpdateQuestion(Question item)

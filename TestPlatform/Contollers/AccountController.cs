@@ -119,6 +119,7 @@ namespace TestPlatform.WEB.Contollers
                     ModelState.AddModelError("", "Неправильный логин и (или) пароль");
                 }
             }
+            model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             return View(model);
         }
 
