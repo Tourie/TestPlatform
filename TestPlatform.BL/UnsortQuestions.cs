@@ -8,31 +8,26 @@ namespace TestPlatform.BL
 {
     public static class UnsortQuestions
     {
-        public static IEnumerable<Question> UnsortQuestionsMethod(List<Question> questions)
+        public static IEnumerable<T> Unsort<T>(List<T> param)
         {
-            var unsorted_questions = new List<Question>();
-            while (questions.Count() != 0)
+            var unsorted_param = new List<T>();
+            while (param.Count() != 0)
             {
                 Random rnd = new Random();
-                int index = rnd.Next(0, questions.Count() - 1);
-                questions[index].Answers = UnsortAnswers(questions[index].Answers.ToList());
-                unsorted_questions.Add(questions[index]);
-                questions.RemoveAt(index);
+                int index = rnd.Next(0, param.Count() - 1);
+                unsorted_param.Add(param[index]);
+                param.RemoveAt(index);
             }
-            return unsorted_questions;
+            return unsorted_param;
         }
 
-        private static IEnumerable<Answer> UnsortAnswers(List<Answer> answers)
+        public static void UnsortQuestionsMethod(List<Question> questions)
         {
-            var unsorted_answers = new List<Answer>();
-            while (answers.Count() != 0)
+            var unsorted_q = Unsort(questions);
+            foreach(var q in unsorted_q)
             {
-                Random rnd = new Random();
-                int index = rnd.Next(0, answers.Count() - 1);
-                unsorted_answers.Add(answers[index]);
-                answers.RemoveAt(index);
+                q.Answers = Unsort(q.Answers.ToList());
             }
-            return unsorted_answers;
         }
     }
 }

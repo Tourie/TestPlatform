@@ -114,7 +114,8 @@ namespace TestPlatform.Contollers
             if (test != null)
             {
                 var questions = test.Questions.ToList();
-                var unsorted_questions = UnsortQuestions.UnsortQuestionsMethod(questions);
+                var unsorted_questions = UnsortQuestions.Unsort(questions);
+                
                 var viewModel = new TestViewModel()
                 {
                     Id = test.Id,

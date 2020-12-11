@@ -28,7 +28,7 @@ namespace TestPlatform.WEB.ViewModels
         [Display(Name = "Category")]
         public int[] TestCategory { get;set; }
 
-        public bool isOwner { get; set; }
+        public string UserId { get; set; }
         public IEnumerable<Category> Categories { get; set; }
         public IEnumerable<Question> Questions { get; set; }
 

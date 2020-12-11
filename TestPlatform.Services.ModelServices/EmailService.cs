@@ -7,7 +7,7 @@ namespace TestPlatform.Services.ModelServices
 {
     public class EmailService
     {
-/*        private readonly IConfiguration _config;
+        /*private readonly IConfiguration _config;
         public EmailService(IConfiguration configuration)
         {
             _config = configuration;
