@@ -123,7 +123,8 @@ namespace TestPlatform.Contollers
                     Description = test.Description,
                     Categories = test.Categories,
                     Questions = unsorted_questions,
-                    Time = test.Time
+                    Time = test.Time,
+                    Started = DateTime.UtcNow
                 };
                 return View(viewModel);
             }
@@ -213,12 +214,13 @@ namespace TestPlatform.Contollers
             var testResult = new TestResult()
             {
                 RightAnswers = rightAnswers,
-                finished = finished,
+                Finished = finished,
                 Test = test,
                 TestId = test.Id,
                 Answers = test.Questions.Count(),
                 User = user,
-                UserId = user.Id
+                UserId = user.Id,
+                Started = viewModel.Started
             };
             _TestResultService.Create(testResult);
             // create viewModel
@@ -229,7 +231,8 @@ namespace TestPlatform.Contollers
                 Test = test,
                 User = user,
                 Answers = test.Questions.Count(),
-                IsTimeout = isTimeOut
+                IsTimeout = isTimeOut,
+                Started = testResult.Started
             };
             return resultViewModel;
         }

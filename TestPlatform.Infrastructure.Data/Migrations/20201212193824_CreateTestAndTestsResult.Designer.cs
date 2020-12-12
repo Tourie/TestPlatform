@@ -10,8 +10,8 @@ using TestPlatform.Infrastructure.Data;
 namespace TestPlatform.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20201210155113_Comments")]
-    partial class Comments
+    [Migration("20201212193824_CreateTestAndTestsResult")]
+    partial class CreateTestAndTestsResult
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -384,19 +384,19 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                     b.Property<DateTime>("PostedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int>("TestId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.HasIndex("UserId");
+                    b.HasKey("Id");
 
                     b.HasIndex("TestId");
 
-                    b.ToTable("Comment");
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("TestPlatform.Core.Question", b =>
@@ -458,6 +458,9 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
@@ -480,6 +483,7 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         new
                         {
                             Id = 1,
+                            Created = new DateTime(2020, 12, 12, 19, 38, 23, 208, DateTimeKind.Utc).AddTicks(5745),
                             Description = "Описание",
                             Name = "Вопросы начального уровня",
                             OwnerId = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
@@ -488,6 +492,7 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         new
                         {
                             Id = 2,
+                            Created = new DateTime(2020, 12, 12, 19, 38, 23, 209, DateTimeKind.Utc).AddTicks(826),
                             Description = "Описание 2 теста",
                             Name = "Вопросы среднего уровня",
                             OwnerId = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
@@ -496,6 +501,7 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         new
                         {
                             Id = 3,
+                            Created = new DateTime(2020, 12, 12, 19, 38, 23, 209, DateTimeKind.Utc).AddTicks(943),
                             Description = "Описание 3 теста",
                             Name = "Вопросы повышенного уровня",
                             OwnerId = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
@@ -513,17 +519,20 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                     b.Property<int>("Answers")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("Finished")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("RightAnswers")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("Started")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("TestId")
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("Finished")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -545,13 +554,13 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         {
                             Id = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1bdc3ca0-b0e7-4d5f-8272-664664c40145",
+                            ConcurrencyStamp = "b438a1d1-c339-4652-b40b-226df006aed0",
                             Email = "email@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "EMAIL@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFcxG7fOSqKYdOq6pQPubkQLfJvtIpp/YnHEuMrCK66OqMDizb3s+WiNm1oTJNNo0w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPC/aQbjbxIuIpIM0fUvvYULE2RmRgkK2fHJkvvh4sKHAX3WZ9NDZDsMBqizDZm+QA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -638,15 +647,15 @@ namespace TestPlatform.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("TestPlatform.Core.Comment", b =>
                 {
-                    b.HasOne("TestPlatform.Core.User", "User")
-                        .WithMany("Comments")
-                        .HasForeignKey("UserId");
-
                     b.HasOne("TestPlatform.Core.Test", "Test")
                         .WithMany("Comments")
                         .HasForeignKey("TestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("TestPlatform.Core.User", "User")
+                        .WithMany("Comments")
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Test");
 

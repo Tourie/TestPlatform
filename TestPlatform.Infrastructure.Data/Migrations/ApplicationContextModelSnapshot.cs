@@ -456,6 +456,9 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
@@ -478,6 +481,7 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         new
                         {
                             Id = 1,
+                            Created = new DateTime(2020, 12, 12, 19, 38, 23, 208, DateTimeKind.Utc).AddTicks(5745),
                             Description = "Описание",
                             Name = "Вопросы начального уровня",
                             OwnerId = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
@@ -486,6 +490,7 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         new
                         {
                             Id = 2,
+                            Created = new DateTime(2020, 12, 12, 19, 38, 23, 209, DateTimeKind.Utc).AddTicks(826),
                             Description = "Описание 2 теста",
                             Name = "Вопросы среднего уровня",
                             OwnerId = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
@@ -494,6 +499,7 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         new
                         {
                             Id = 3,
+                            Created = new DateTime(2020, 12, 12, 19, 38, 23, 209, DateTimeKind.Utc).AddTicks(943),
                             Description = "Описание 3 теста",
                             Name = "Вопросы повышенного уровня",
                             OwnerId = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
@@ -511,17 +517,20 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                     b.Property<int>("Answers")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("Finished")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("RightAnswers")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("Started")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("TestId")
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("finished")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -543,13 +552,13 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                         {
                             Id = "DD20FD22-4350-4D1C-98C4-E82F21C1F414",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c6ffa543-8179-4fd9-a478-ffd8290f2ae7",
+                            ConcurrencyStamp = "b438a1d1-c339-4652-b40b-226df006aed0",
                             Email = "email@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "EMAIL@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOBVtXUHW2TKV042GHQZF42CemCLhdwQYNXHiCPTHLu07nW+IkuxapmT0TDhPoipRQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPC/aQbjbxIuIpIM0fUvvYULE2RmRgkK2fHJkvvh4sKHAX3WZ9NDZDsMBqizDZm+QA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

@@ -9,7 +9,7 @@ namespace TestPlatform.WEB.ViewModels
 {
     public class TestViewModel
     {
-        [Display(Name="Id")]
+        [Display(Name = "Id")]
         public int Id { get; set; }
 
         [Required]
@@ -23,16 +23,19 @@ namespace TestPlatform.WEB.ViewModels
         [Required]
         [Display(Name = "Time")]
         public uint Time { get; set; }
-        
+
         [Required]
         [Display(Name = "Category")]
-        public int[] TestCategory { get;set; }
+        public int[] TestCategory { get; set; }
 
         public string UserId { get; set; }
         public IEnumerable<Category> Categories { get; set; }
         public IEnumerable<Question> Questions { get; set; }
 
         [Display(Name = "UsersAnswers")]
-        public Dictionary<int,int> UsersAnswers { get; set; }
+        public Dictionary<int, int> UsersAnswers { get; set; }
+
+        [Display(Name = "Started")]
+        public DateTime Started { get; set; }
     }
 }

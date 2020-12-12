@@ -12,7 +12,8 @@
 <h1>Результат по тесту #@Model.Test.Id</h1>
 <p><b>Название: </b> @Model.Test.Name</p>
 <p><b>Результат: </b> @Model.RightAnswers / @Model.Answers</p>
-<p class="date-output"><b>Окончен: </b> @Model.Finished</p>
+<p><b>Начат: </b> <span class="date-output">@Model.Started</span></p>
+<p><b>Окончен: </b> <span class="date-output">@Model.Finished</span></p>
 
 <a class="button primary" asp-action="Index" asp-controller="Tests">Ок</a>
 

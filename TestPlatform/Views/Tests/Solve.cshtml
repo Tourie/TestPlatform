@@ -8,6 +8,7 @@
 
 <form id="form1" method="post" asp-controller="Tests" asp-action="Result">
     <div asp-validation-summary="ModelOnly"></div>
+    <p class="date-output">Начал: @Model.Started</p>
     @foreach (var (question, index) in Model.Questions.Select((item, index) => (item, index)))
     {
         <p><b>@(index+1). @question.Name</b></p>

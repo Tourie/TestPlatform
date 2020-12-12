@@ -17,6 +17,8 @@ namespace TestPlatform.WEB.ViewModels
         public int Answers { get; set; }
         [Display(Name = "Finished")]
         public DateTime Finished { get; set; }
+        [Display(Name = "Started")]
+        public DateTime Started { get; set; }
 
         [Display(Name = "Test")]
         public Test Test { get; set; }

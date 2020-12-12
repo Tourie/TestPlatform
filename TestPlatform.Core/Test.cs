@@ -9,9 +9,8 @@ namespace TestPlatform.Core
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public uint Time { get; set; } 
-      /*  public DateTime Created { get; set; }
-        public DateTime Changed { get; set; }*/
+        public uint Time { get; set; }
+        public DateTime Created { get; set; } = DateTime.UtcNow;
 
         public IEnumerable<Category> Categories { get; set; }
 

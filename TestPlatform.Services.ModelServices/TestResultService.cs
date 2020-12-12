@@ -30,5 +30,10 @@ namespace TestPlatform.Services.ModelServices
         {
             return _repository.GetContext().testResults.Where(result => result.UserId == user_id).Include(result=>result.Test);
         }
+
+        public void Update(TestResult testResult)
+        {
+            _repository.Update(testResult);
+        }
     }
 }

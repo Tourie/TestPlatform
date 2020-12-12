@@ -492,7 +492,7 @@ namespace TestPlatform.Infrastructure.Data.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime>("finished")
+                    b.Property<DateTime>("Finished")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");

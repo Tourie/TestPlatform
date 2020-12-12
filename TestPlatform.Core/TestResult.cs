@@ -9,7 +9,8 @@ namespace TestPlatform.Core
         public int Id { get; set; }
         public int RightAnswers { get; set; }
         public int Answers { get; set; }
-        public DateTime finished { get; set; }
+        public DateTime Started { get; set; }
+        public DateTime Finished { get; set; }
 
         public int TestId { get; set; }
         public Test Test { get; set; }
