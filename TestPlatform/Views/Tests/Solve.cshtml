@@ -6,7 +6,7 @@
 
 <h1>Тест @Model.Name</h1>
 
-<form method="post" asp-controller="Tests" asp-action="Check">
+<form id="form1" method="post" asp-controller="Tests" asp-action="Result">
     <div asp-validation-summary="ModelOnly"></div>
     @foreach (var (question, index) in Model.Questions.Select((item, index) => (item, index)))
     {
@@ -19,5 +19,11 @@
             </div>
         }
     }
-    <button type="submit" asp-action="Result" asp-controller="Tests" asp-route-id="@Model.Id">Отправить</button>
+    <button type="submit" asp-controller="Tests" asp-action="Result" asp-route-id="@Model.Id">Отправить</button>
 </form>
+
+<script type="text/javascript">
+    setTimeout(function () {
+        window.location.href = '/Tests/TimeOut/' + @Model.Id;
+    }, @Model.Time * 60000);
+</script>

@@ -16,12 +16,14 @@ namespace TestPlatform.WEB.ViewModels
         [Display (Name = "Answers")]
         public int Answers { get; set; }
         [Display(Name = "Finished")]
-        public DateTime finished { get; set; }
+        public DateTime Finished { get; set; }
 
         [Display(Name = "Test")]
         public Test Test { get; set; }
 
         [Display(Name = "User")]
         public User User { get; set; }
+
+        public bool IsTimeout { get; set; }
     }
 }

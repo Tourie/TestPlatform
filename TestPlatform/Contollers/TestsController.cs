@@ -173,43 +173,66 @@ namespace TestPlatform.Contollers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Result(TestViewModel viewModel, int? id)
+        public IActionResult Result(TestViewModel viewModel, int? id)
         {
             if (id.HasValue)
             {
-                DateTime finished = DateTime.Now;
-                var usersAnswers = viewModel.UsersAnswers;
-                var test = _TestService.GetTest(id.Value);
-                // check answers
-                int rightAnswers = ValidateTestsResults.Check(usersAnswers, test);
-                // get user
-                var user = await _userManager.GetUserAsync(HttpContext.User);
-                // create testResult in database
-                var testResult = new TestResult() 
-                { 
-                    RightAnswers = rightAnswers, finished = finished, 
-                    Test = test, TestId = test.Id, 
-                    Answers = test.Questions.Count(),
-                    User = user, 
-                    UserId = user.Id
-                };
-                _TestResultService.Create(testResult);
-                // create viewModel
-                var resultViewModel = new TestResultViewModel() 
-                { 
-                    RightAnswers = rightAnswers, 
-                    finished = finished, 
-                    Test = test, 
-                    User = user, 
-                    Answers = test.Questions.Count() 
-                };
+                var resultViewModel = CreateTestResultViewModel(id.Value, viewModel);
                 return View(resultViewModel);
             }
+
             else
             {
                 return NotFound();
             }
+
         }
-        
+
+        [HttpGet]
+        public IActionResult TimeOut(int? id)
+        {
+            if (id.HasValue)
+            {
+                var resultViewModel = CreateTestResultViewModel(id.Value, null, true);
+                return View("Result", resultViewModel);
+            }
+
+            return NotFound();
+        }
+
+        private TestResultViewModel CreateTestResultViewModel(int id, TestViewModel viewModel=null, bool isTimeOut = false)
+        {
+            DateTime finished = DateTime.UtcNow;
+            var usersAnswers = viewModel?.UsersAnswers;
+            var test = _TestService.GetTest(id);
+            // check answers
+            int rightAnswers = ValidateTestsResults.Check(usersAnswers, test);
+            // get user
+            var user = _userManager.GetUserAsync(HttpContext.User).Result;
+            // create testResult in database
+            var testResult = new TestResult()
+            {
+                RightAnswers = rightAnswers,
+                finished = finished,
+                Test = test,
+                TestId = test.Id,
+                Answers = test.Questions.Count(),
+                User = user,
+                UserId = user.Id
+            };
+            _TestResultService.Create(testResult);
+            // create viewModel
+            var resultViewModel = new TestResultViewModel()
+            {
+                RightAnswers = rightAnswers,
+                Finished = finished,
+                Test = test,
+                User = user,
+                Answers = test.Questions.Count(),
+                IsTimeout = isTimeOut
+            };
+            return resultViewModel;
+        }
+
     }
 }
