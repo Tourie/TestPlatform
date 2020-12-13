@@ -15,6 +15,7 @@
             
             <td align="right"><a class="btn btn-primary" asp-controller="Tests" asp-action="Detail" asp-route-id="@test.Id">Подробнее</a></td>
             <td align="right"><a class="btn btn-danger" asp-controller="Tests" asp-action="Delete" asp-route-id="@test.Id">Удалить</a></td>
+            <td align="right" class="date-output">@test.Created</td>
         </tr>
     }
 </table>

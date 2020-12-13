@@ -8,7 +8,7 @@
 
 <form id="form1" method="post" asp-controller="Tests" asp-action="Result">
     <div asp-validation-summary="ModelOnly"></div>
-    <p class="date-output">Начал: @Model.Started</p>
+    <p><b>Тест начал: </b><span class="date-output">@Model.Started</span></p>
     @foreach (var (question, index) in Model.Questions.Select((item, index) => (item, index)))
     {
         <p><b>@(index+1). @question.Name</b></p>
@@ -20,11 +20,12 @@
             </div>
         }
     }
-    <button type="submit" asp-controller="Tests" asp-action="Result" asp-route-id="@Model.Id">Отправить</button>
+    <input value="@Model.ResultId" name="ResultId" hidden />
+    <button type="submit" asp-controller="Tests" asp-action="Result" asp-route-id="@Model.Id" asp-route-resultId="@Model.ResultId">Отправить</button>
 </form>
 
 <script type="text/javascript">
     setTimeout(function () {
-        window.location.href = '/Tests/TimeOut/' + @Model.Id;
+        window.location.href = '/Tests/TimeOut/' + @Model.Id.ToString() + "?resultId=" + @Model.ResultId.ToString();
     }, @Model.Time * 60000);
 </script>

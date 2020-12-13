@@ -33,8 +33,8 @@ namespace TestPlatform.WEB.Contollers
             }
             results.Sort((result1, result2) =>
             {
-                if (result1.Finished < result2.Finished) return 1;
-                else if (result1.Finished > result2.Finished) return -1;
+                if (result1.Started < result2.Started) return 1;
+                else if (result1.Started > result2.Started) return -1;
                 else return 0;
             });
             return View(results);

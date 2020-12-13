@@ -11,5 +11,7 @@ namespace TestPlatform.Services.Interfaces
         void Update(TestResult testResult);
         IEnumerable<TestResult> GetUserResults(string user_id);
         IEnumerable<TestResult> GetTestResults(Test test);
+
+        TestResult GetTestResult(int id);
     }
 }

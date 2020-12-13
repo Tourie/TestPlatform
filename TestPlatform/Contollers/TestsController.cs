@@ -111,11 +111,16 @@ namespace TestPlatform.Contollers
                 return NotFound();
             }
             var test = _TestService.GetTest(id.Value);
+            var user = _userManager.GetUserAsync(User).Result;
             if (test != null)
             {
                 var questions = test.Questions.ToList();
                 var unsorted_questions = UnsortQuestions.Unsort(questions);
-                
+
+                var started = DateTime.UtcNow;
+                var testResult = new TestResult() { Started = started, Answers = test.Questions.Count(), Test = test, TestId = test.Id, User = user, UserId = user.Id, Finished = DateTime.Parse("05/15/2001") };
+                _TestResultService.Create(testResult);
+                var resultId = _TestResultService.GetUserResults(user.Id).SingleOrDefault(r => r.Started == started).Id;
                 var viewModel = new TestViewModel()
                 {
                     Id = test.Id,
@@ -124,7 +129,8 @@ namespace TestPlatform.Contollers
                     Categories = test.Categories,
                     Questions = unsorted_questions,
                     Time = test.Time,
-                    Started = DateTime.UtcNow
+                    Started = started,
+                    ResultId = resultId
                 };
                 return View(viewModel);
             }
@@ -174,11 +180,11 @@ namespace TestPlatform.Contollers
         }
 
         [HttpPost]
-        public IActionResult Result(TestViewModel viewModel, int? id)
+        public IActionResult Result(TestViewModel viewModel, int? id, int? resultId)
         {
-            if (id.HasValue)
+            if (id.HasValue && resultId.HasValue)
             {
-                var resultViewModel = CreateTestResultViewModel(id.Value, viewModel);
+                var resultViewModel = CreateTestResultViewModel(id.Value, resultId.Value, viewModel);
                 return View(resultViewModel);
             }
 
@@ -190,18 +196,18 @@ namespace TestPlatform.Contollers
         }
 
         [HttpGet]
-        public IActionResult TimeOut(int? id)
+        public IActionResult TimeOut(int? id, int? resultId)
         {
-            if (id.HasValue)
+            if (id.HasValue && resultId.HasValue)
             {
-                var resultViewModel = CreateTestResultViewModel(id.Value, null, true);
+                var resultViewModel = CreateTestResultViewModel(id.Value, resultId.Value, new TestViewModel(), true);
                 return View("Result", resultViewModel);
             }
 
             return NotFound();
         }
 
-        private TestResultViewModel CreateTestResultViewModel(int id, TestViewModel viewModel=null, bool isTimeOut = false)
+        private TestResultViewModel CreateTestResultViewModel(int id, int resultId, TestViewModel viewModel, bool isTimeOut = false)
         {
             DateTime finished = DateTime.UtcNow;
             var usersAnswers = viewModel?.UsersAnswers;
@@ -211,30 +217,30 @@ namespace TestPlatform.Contollers
             // get user
             var user = _userManager.GetUserAsync(HttpContext.User).Result;
             // create testResult in database
-            var testResult = new TestResult()
+            var testResult = _TestResultService.GetTestResult(resultId);
+            if (testResult != null)
             {
-                RightAnswers = rightAnswers,
-                Finished = finished,
-                Test = test,
-                TestId = test.Id,
-                Answers = test.Questions.Count(),
-                User = user,
-                UserId = user.Id,
-                Started = viewModel.Started
-            };
-            _TestResultService.Create(testResult);
-            // create viewModel
-            var resultViewModel = new TestResultViewModel()
-            {
-                RightAnswers = rightAnswers,
-                Finished = finished,
-                Test = test,
-                User = user,
-                Answers = test.Questions.Count(),
-                IsTimeout = isTimeOut,
-                Started = testResult.Started
-            };
-            return resultViewModel;
+                if (testResult.Finished == DateTime.Parse("05/15/2001") && testResult.Finished - testResult.Started <= TimeSpan.FromMinutes(test.Time))
+                {
+                    testResult.Finished = finished;
+                    testResult.RightAnswers = rightAnswers;
+                    _TestResultService.Update(testResult);
+                }
+                // create viewModel
+                var resultViewModel = new TestResultViewModel()
+                {
+                    RightAnswers = testResult.RightAnswers,
+                    Finished = testResult.Finished,
+                    Test = test,
+                    User = user,
+                    Answers = test.Questions.Count(),
+                    IsTimeout = isTimeOut,
+                    Started = testResult.Started
+                };
+                return resultViewModel;
+            }
+            return null;
+            
         }
 
     }

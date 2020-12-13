@@ -22,7 +22,15 @@
             <td align="left">@result.Test.Name</td>
             <td align="left">@result.RightAnswers / @result.Answers</td>
             <td align="left" class="date-output">@result.Started</td>
-            <td align="left" class="date-output">@result.Finished</td>
+            @if (result.Finished == DateTime.Parse("05/15/2001"))
+            {
+                <td align="left">Тест не был закончен</td>
+            }
+            else
+            {
+                <td align="left" class="date-output">@result.Finished</td>
+            }
+
             <td align="left">@result.User.UserName</td>
         </tr>
     }

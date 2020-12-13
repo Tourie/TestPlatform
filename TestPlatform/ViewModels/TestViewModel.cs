@@ -37,5 +37,8 @@ namespace TestPlatform.WEB.ViewModels
 
         [Display(Name = "Started")]
         public DateTime Started { get; set; }
+
+        [Display(Name = "ResultId")]
+        public int ResultId { get; set; }
     }
 }

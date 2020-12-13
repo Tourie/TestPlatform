@@ -66,5 +66,6 @@ namespace TestPlatform.Infrastructure.Data.Repositories
         {
             return this._db;
         }
+
     }
 }
